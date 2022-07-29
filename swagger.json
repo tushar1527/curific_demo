@@ -1,0 +1,5745 @@
+{
+	"openapi": "3.0.0",
+	"info": {
+		"title": "CurificBackend Copy",
+		"contact": {},
+		"version": "1.0"
+	},
+	"servers": [
+		{
+			"url": "http://65.2.142.187:5001/api/v1",
+			"variables": {}
+		}
+	],
+	"paths": {
+		"/permissions/create": {
+			"post": {
+				"tags": ["Admin permissions"],
+				"summary": "PermissionsCreate",
+				"description": "Permissions Create",
+				"operationId": "PermissionsCreate",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/PermissionsCreateRequest"
+							},
+							"example": {
+								"path": "employee-service/a",
+								"displayName": "Employee  Service"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/permissions/get": {
+			"get": {
+				"tags": ["Admin permissions"],
+				"summary": "PermissionsGet",
+				"description": "Permissions Get",
+				"operationId": "PermissionsGet",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/permissions/update/{id}": {
+			"put": {
+				"tags": ["Admin permissions"],
+				"summary": "UpdatePermissions",
+				"description": "Update Permissions",
+				"operationId": "UpdatePermissions",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdatePermissionsRequest"
+							},
+							"example": {
+								"path": "website_header/get",
+								"createdBy": "6107cc835e94d0bc7dd9f1c2",
+								"displayName": "Get Header"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/permissions/delete/{id}": {
+			"delete": {
+				"tags": ["Admin permissions"],
+				"summary": "PermissionsDelete",
+				"description": "Permissions Delete",
+				"operationId": "PermissionsDelete",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/role/create": {
+			"post": {
+				"tags": ["Admin Role"],
+				"summary": "CreateRole",
+				"description": "Create Role",
+				"operationId": "CreateRole",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateRoleRequest"
+							},
+							"example": {
+								"name": "EDITOR",
+								"permissions": ["6110d5db84d4803c28737723"]
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/role/get": {
+			"get": {
+				"tags": ["Admin Role"],
+				"summary": "Getrole",
+				"description": "Get role",
+				"operationId": "Getrole",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/role/update/{id}": {
+			"put": {
+				"tags": ["Admin Role"],
+				"summary": "updateRole",
+				"description": "update Role",
+				"operationId": "updateRole",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/updateRoleRequest"
+							},
+							"example": {
+								"name": "SUPER_USER",
+								"createdBy": "6107cc835e94d0bc7dd9f1c2",
+								"permissions": [
+									"610d0b608308ca8cce20c41f",
+									"610d0b608308ca8cce20c420",
+									"610d0b608308ca8cce20c421",
+									"610d0b608308ca8cce20c422",
+									"610d0b608308ca8cce20c423",
+									"610d0b608308ca8cce20c424",
+									"610d0b608308ca8cce20c425",
+									"610d0b608308ca8cce20c426",
+									"610d0b608308ca8cce20c427",
+									"610d0b608308ca8cce20c428",
+									"610d0b608308ca8cce20c429",
+									"610d0b608308ca8cce20c42a",
+									"610d0b608308ca8cce20c42b",
+									"610d0b608308ca8cce20c42c",
+									"610d0b608308ca8cce20c42d",
+									"610d0b608308ca8cce20c42e",
+									"610d0b608308ca8cce20c42f",
+									"610d0b608308ca8cce20c430",
+									"610d0b608308ca8cce20c431",
+									"610d0b608308ca8cce20c432",
+									"610d0b608308ca8cce20c433",
+									"610d0b608308ca8cce20c434",
+									"610d0b608308ca8cce20c435",
+									"610d0b608308ca8cce20c436",
+									"610d0b608308ca8cce20c437",
+									"610d0b608308ca8cce20c438",
+									"610d0b608308ca8cce20c439",
+									"610d0b608308ca8cce20c43a",
+									"610d0b608308ca8cce20c43b",
+									"610d0b608308ca8cce20c43c",
+									"610d0b608308ca8cce20c43d",
+									"610d0b608308ca8cce20c43e",
+									"610d0b608308ca8cce20c43f",
+									"610d0b608308ca8cce20c440",
+									"610d0b608308ca8cce20c441",
+									"610d0b608308ca8cce20c442",
+									"610d0b608308ca8cce20c443",
+									"610d0b608308ca8cce20c444",
+									"610d0b608308ca8cce20c445",
+									"610d0b608308ca8cce20c446",
+									"610d0b608308ca8cce20c447",
+									"610d0b608308ca8cce20c448",
+									"610d0b618308ca8cce20c449",
+									"610d0b618308ca8cce20c44a",
+									"610d0b618308ca8cce20c44b",
+									"610d0b618308ca8cce20c44c",
+									"610d0b618308ca8cce20c44d",
+									"610d0b618308ca8cce20c44e",
+									"610d0b618308ca8cce20c44f",
+									"610d0b618308ca8cce20c450",
+									"610d0b618308ca8cce20c451",
+									"610d0b618308ca8cce20c452",
+									"610d0b618308ca8cce20c453",
+									"610d0b618308ca8cce20c454",
+									"610d0b618308ca8cce20c455",
+									"6110c1ed170cf61a4c8d3e47",
+									"6110d11772f7ae3890564085",
+									"6110d0b3449850384837abc4"
+								]
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/role/delete/{id}": {
+			"delete": {
+				"tags": ["Admin Role"],
+				"summary": "DeleteRole",
+				"description": "Delete Role",
+				"operationId": "DeleteRole",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/admin-user/create": {
+			"post": {
+				"tags": ["Admin User"],
+				"summary": "CreateAdminUser",
+				"description": "Create Admin User",
+				"operationId": "CreateAdminUser",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateAdminUserRequest"
+							},
+							"example": {
+								"name": "Tushar20",
+								"email": "tushar20@mailinator.com",
+								"role": "6110d7992b1f633dfe13b7a6",
+								"profileImage": "aaa"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/admin-user/login": {
+			"post": {
+				"tags": ["Admin User"],
+				"summary": "LoginAdminUser",
+				"description": "Login Admin User",
+				"operationId": "LoginAdminUser",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/LoginAdminUserRequest"
+							},
+							"example": {
+								"email": "developer#123@example.com",
+								"password": "developer@123"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/admin-user/get": {
+			"get": {
+				"tags": ["Admin User"],
+				"summary": "ListAdminUser",
+				"description": "List Admin User",
+				"operationId": "ListAdminUser",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/admin-user/status/{id}": {
+			"put": {
+				"tags": ["Admin User"],
+				"summary": "UpdateAdminUser",
+				"description": "Update Admin User",
+				"operationId": "UpdateAdminUser",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/admin-user/update/{id}": {
+			"put": {
+				"tags": ["Admin User"],
+				"summary": "UpdateStatusAdminUser",
+				"description": "Update Status Admin User",
+				"operationId": "UpdateStatusAdminUser",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateStatusAdminUserRequest"
+							},
+							"example": {
+								"name": "Tushar14",
+								"role": "610b763ec7b7c82dac1763b7",
+								"profileImage": "aaa"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/admin-user/delete/{id}": {
+			"delete": {
+				"tags": ["Admin User"],
+				"summary": "DeleteAdminUser",
+				"description": "Delete Admin User",
+				"operationId": "DeleteAdminUser",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/admin-user/changePassword": {
+			"put": {
+				"tags": ["Admin User"],
+				"summary": "ChangePasswordAdminUser",
+				"description": "Change Password Admin User",
+				"operationId": "ChangePasswordAdminUser",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ChangePasswordAdminUserRequest"
+							},
+							"example": {
+								"oldPassword": "superUser@123",
+								"newPassword": "superUser@123"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/admin-user/forget-password": {
+			"post": {
+				"tags": ["Admin User"],
+				"summary": "ForgetPassword",
+				"description": "Forget Password",
+				"operationId": "ForgetPassword",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ForgetPasswordRequest"
+							},
+							"example": {
+								"email": "tushar18@mailinator.com"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/admin-user/reset-password": {
+			"put": {
+				"tags": ["Admin User"],
+				"summary": "ResetPassword",
+				"description": "Reset Password",
+				"operationId": "ResetPassword",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/ResetPasswordRequest"
+							},
+							"example": {
+								"email": "tushar18@mailinator.com",
+								"newPassword": "123456"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/user/verify-otp": {
+			"post": {
+				"tags": ["User"],
+				"summary": "VerifyCustomer",
+				"description": "Verify Customer",
+				"operationId": "VerifyCustomer",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/VerifyCustomerRequest"
+							},
+							"example": {
+								"email": "customer1@gmail.com",
+								"type": "CUSTOMER",
+								"otp": 9571
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/user/customer/list": {
+			"get": {
+				"tags": ["User"],
+				"summary": "GetuserList",
+				"description": "Get user List",
+				"operationId": "GetuserList",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m200"
+								},
+								"example": {
+									"success": true,
+									"msg": "User get successfully",
+									"data": [
+										{
+											"email": "tanveedadhaneeya32@gmail.com",
+											"otp": 432007118,
+											"gender": "NULL",
+											"fireBaseToken": null,
+											"profileImage": null,
+											"password": "$2b$10$K0hhdmAe5AtLD0M0rpMxzOAY7mhq.61aJ7V9NKT6mf1k4ADVgb7Ca",
+											"salt": "$2b$10$K0hhdmAe5AtLD0M0rpMxzO",
+											"addedBy": null,
+											"isEnabled": false,
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "629d9858326ee12ab8200d78",
+											"name": "tanvi dadhaniya",
+											"mobileNumber": "+919726201932",
+											"createdAt": "2022-06-06T06:02:00.207Z",
+											"updatedAt": "2022-06-06T06:02:00.207Z",
+											"__v": 0
+										}
+									],
+									"totalCount": 1
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/user/create": {
+			"post": {
+				"tags": ["Dr &customer"],
+				"summary": "Dr.Create",
+				"description": "Dr. Create",
+				"operationId": "Dr.Create",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/Dr.CreateRequest"
+							},
+							"example": {
+								"name": "customer1",
+								"email": "customer1@gmail.com",
+								"mobileNumber": "+917383801751",
+								"type": "CUSTOMER"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/timeSlot/assign": {
+			"put": {
+				"tags": ["Dr &customer"],
+				"summary": "AssignTimeSlot",
+				"description": "Assign Time Slot",
+				"operationId": "AssignTimeSlot",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/AssignTimeSlotRequest"
+							},
+							"example": {
+								"drId": "62d95849c1da0d310474a30d",
+								"timeSlot": [
+									"62d7a59a9492b434857b8e4a",
+									"62d7a5b99492b434857b8e50",
+									"62d7a5cf9492b434857b8e56",
+									"62d7a5de9492b434857b8e5c",
+									"62d7a64a9492b434857b8e62",
+									"62d7a65d9492b434857b8e68",
+									"62d7a66c9492b434857b8e6e",
+									"62d7a67a9492b434857b8e74"
+								]
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/AssignTimeSlot"
+								},
+								"example": {
+									"success": true,
+									"msg": "Time Slot assign successfully",
+									"data": []
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/user/dr/list": {
+			"get": {
+				"tags": ["Dr &customer"],
+				"summary": "GetDr.List",
+				"description": "Get Dr. List",
+				"operationId": "GetDr.List",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m2001"
+								},
+								"example": {
+									"success": true,
+									"msg": "Doctor get successfully",
+									"data": [
+										{
+											"email": "savaliyatushar2197@gmail.com",
+											"gender": "NULL",
+											"mainStream": null,
+											"specialization": null,
+											"fireBaseToken": null,
+											"profileImage": null,
+											"password": "$2b$10$E/FMUUWGJFTArw0gTa5iaOc1GYQhJ/79GYZNZYC8YhVlpkCqsSQ6q",
+											"salt": "$2b$10$E/FMUUWGJFTArw0gTa5iaO",
+											"addedBy": null,
+											"designation": null,
+											"timeSlot": [
+												"62ce6b4e887df22d203c5ff4",
+												"62ceb08ae87bb632e05ca32f"
+											],
+											"isEnabled": true,
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62ceb0fee87bb632e05ca33e",
+											"name": "tushar Savaliya",
+											"mobileNumber": "+918980514085",
+											"otp": 4550,
+											"createdAt": "2022-07-13T11:48:14.877Z",
+											"updatedAt": "2022-07-13T12:00:46.691Z",
+											"__v": 0
+										}
+									],
+									"totalCount": 1
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/user/customer/delete/{id}": {
+			"delete": {
+				"tags": ["Dr &customer"],
+				"summary": "DeleteCustomer",
+				"description": "Delete Customer",
+				"operationId": "DeleteCustomer",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m2002"
+								},
+								"example": {
+									"success": true,
+									"msg": "Doctor delete successfully",
+									"data": []
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/user/social/login": {
+			"post": {
+				"tags": ["Dr &customer"],
+				"summary": "sociallogin",
+				"description": "social login",
+				"operationId": "sociallogin",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/socialloginrequest"
+							},
+							"example": {
+								"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImNkNjcyYTI5OGRkNTk3NzYyMTJlNmE2ZDgzZmI4YTllNjBmZjNiZWYifQ.eyJpc3MiOiJodHRwczpcL1wvd3d3LmZhY2Vib29rLmNvbSIsImF1ZCI6IjEwOTYwMTA0MzQzMzgxOTIiLCJzdWIiOiIxNDUxMTA5MTg1MzAxNTU0IiwiaWF0IjoxNjU4MzIyMTI3LCJleHAiOjE2NTgzMjU3MjcsImp0aSI6IkRJMFguZDlmMWU3ODZjOTc5OTNkNTk1ODMxZTc1ZTAyNzc0YmNmZDQyODVjMDE5NzFkOGQ4M2NmNWE1M2UzNTJkZTEzMiIsIm5vbmNlIjoibXlfbm9uY2UiLCJlbWFpbCI6InBpcGFsaXlhc2Fua2V0MVx1MDA0MGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJTYW5rZXQiLCJmYW1pbHlfbmFtZSI6IlBpcGFsaXlhIiwibmFtZSI6IlNhbmtldCBQaXBhbGl5YSIsInBpY3R1cmUiOiJodHRwczpcL1wvcGxhdGZvcm0tbG9va2FzaWRlLmZic2J4LmNvbVwvcGxhdGZvcm1cL3Byb2ZpbGVwaWNcLz9hc2lkPTE0NTExMDkxODUzMDE1NTQmaGVpZ2h0PTEwMCZ3aWR0aD0xMDAmZXh0PTE2NjA5MTQxMjgmaGFzaD1BZVNVUmR5QVYzX3NaLVkwRDBVIn0.fzXmN3ivyVpq3cWjPV94lgk3iimF6dsl4PnhfvGj2WntwXG8VUJ6o_VEM_Tau_Un6Un_JUl1TnKMM-4ljtCNlEn4YXfGpSHXwatZ22X7UyRjxTTBZezloUw_sFrolSWz_ys9NsKWfGvO8WBLbekppE6bJNUzVe-jCrkLmY7fOVc2IguVg36VWcyIsZAvdeGzsIC5rm3D9jRg8h2HJuTpH5NB2X58Vq8enMv9ZzwGKmRkkFmpUDEyMXGMUZ6eH622-Ngn2hfHIQJIaJFMLEVNxpQMD7GGKNyKSRpuqHK-E-T95Ug-KG1wha6hwi-G_t8So7T2Vqpl8XOCcpJMVRd_Jw",
+								"type": "CUSTOMER"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/common/createConsult": {
+			"post": {
+				"tags": ["common api"],
+				"summary": "CreateConsult",
+				"description": "Create Consult",
+				"operationId": "CreateConsult",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreateConsultRequest"
+							},
+							"example": {
+								"name": "phone"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/common/createLanguage": {
+			"post": {
+				"tags": ["common api"],
+				"summary": "createlanguage",
+				"description": "create language",
+				"operationId": "createlanguage",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/createlanguagerequest"
+							},
+							"example": {
+								"name": "gujarati"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/common/updateLanguage": {
+			"post": {
+				"tags": ["common api"],
+				"summary": "UpdateLanguage",
+				"description": "Update Language",
+				"operationId": "UpdateLanguage",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateLanguageRequest"
+							},
+							"example": {
+								"name": "english"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/common/updateConsult/{id}": {
+			"post": {
+				"tags": ["common api"],
+				"summary": "UpdateConsult",
+				"description": "Update Consult",
+				"operationId": "UpdateConsult",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateConsultRequest"
+							},
+							"example": {
+								"name": "text edit"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/common/getAllLanguage/{id}": {
+			"get": {
+				"tags": ["common api"],
+				"summary": "getAllLanguage",
+				"description": "get All Language",
+				"operationId": "getAllLanguage",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/common/getAllConsult/{id}": {
+			"get": {
+				"tags": ["common api"],
+				"summary": "getAllConsult",
+				"description": "get All Consult",
+				"operationId": "getAllConsult",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/common/deleteLanguage/{id}": {
+			"delete": {
+				"tags": ["common api"],
+				"summary": "deletelanguage",
+				"description": "delete language",
+				"operationId": "deletelanguage",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/common/deleteConsult/{id}": {
+			"delete": {
+				"tags": ["common api"],
+				"summary": "deleteConsult",
+				"description": "delete Consult",
+				"operationId": "deleteConsult",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/notificationType/create": {
+			"post": {
+				"tags": ["NotificationType"],
+				"summary": "createnotificationtype",
+				"description": "create notification type",
+				"operationId": "createnotificationtype",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/createnotificationtyperequest"
+							},
+							"example": {
+								"type": "SMS",
+								"message": "Hello, This is gental reminder for you appointment"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/notificationType/update/{id}": {
+			"put": {
+				"tags": ["NotificationType"],
+				"summary": "updatenotificationtype",
+				"description": "update notification type",
+				"operationId": "updatenotificationtype",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/updatenotificationtyperequest"
+							},
+							"example": {
+								"type": "SMS",
+								"message": "Hello, This is gental reminder for you appointment !"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/notificationType/delete/{id}": {
+			"delete": {
+				"tags": ["NotificationType"],
+				"summary": "deletenotificationtype",
+				"description": "delete notification type",
+				"operationId": "deletenotificationtype",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/notificationType/list": {
+			"get": {
+				"tags": ["NotificationType"],
+				"summary": "updatenotificationtypeCopy",
+				"description": "update notification type Copy",
+				"operationId": "updatenotificationtypeCopy",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/device/create": {
+			"post": {
+				"tags": ["Device"],
+				"summary": "Adddevice",
+				"description": "Add device",
+				"operationId": "Adddevice",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/AdddeviceRequest"
+							},
+							"example": {
+								"deviceId": "aaaa",
+								"deviceName": "spring",
+								"deviceType": "aaa",
+								"deviceModal": "tm005a",
+								"treatment": "aaaa"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m500"
+								},
+								"example": {
+									"success": false,
+									"message": "Device Already available"
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/device/get": {
+			"get": {
+				"tags": ["Device"],
+				"summary": "Getdevices",
+				"description": "Get devices",
+				"operationId": "Getdevices",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m2008"
+								},
+								"example": {
+									"message": "Device get successfully",
+									"data": [
+										{
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62cd7a643ad98c1bb0ffd8e8",
+											"deviceId": "aaaa",
+											"deviceType": "aaa",
+											"deviceName": "spring",
+											"deviceModal": "tm005a",
+											"treatment": "aaaa",
+											"createdAt": "2022-07-12T13:43:00.881Z",
+											"updatedAt": "2022-07-12T13:43:00.881Z",
+											"__v": 0
+										},
+										{
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62ce7381e3b02d3b305c4caf",
+											"deviceId": "aaaaa",
+											"deviceType": "aaa",
+											"deviceName": "spring",
+											"deviceModal": "tm005a",
+											"treatment": "aaaa",
+											"createdAt": "2022-07-13T07:25:53.661Z",
+											"updatedAt": "2022-07-13T07:25:53.661Z",
+											"__v": 0
+										}
+									],
+									"totalCount": 2
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/device/update/{id}": {
+			"put": {
+				"tags": ["Device"],
+				"summary": "Updatedevice",
+				"description": "Update device",
+				"operationId": "Updatedevice",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdatedeviceRequest"
+							},
+							"example": {
+								"deviceName": "fddddff",
+								"deviceType": "aaa",
+								"deviceModal": "tm005a",
+								"treatment": "aaaa"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m2007"
+								},
+								"example": {
+									"success": true,
+									"message": "Device update successfully",
+									"data": []
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/device/delete/{id}": {
+			"delete": {
+				"tags": ["Device"],
+				"summary": "DeleteDevice",
+				"description": "Delete Device",
+				"operationId": "DeleteDevice",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m2007"
+								},
+								"example": {
+									"success": true,
+									"message": "Device delete successfully",
+									"data": []
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/dashboard": {
+			"get": {
+				"tags": ["Dashboard"],
+				"summary": "GetDashboard",
+				"description": "Get Dashboard",
+				"operationId": "GetDashboard",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/timeSlot/create": {
+			"post": {
+				"tags": ["Time Slot"],
+				"summary": "CreatetimeSlot",
+				"description": "Create time Slot",
+				"operationId": "CreatetimeSlot",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreatetimeSlotRequest"
+							},
+							"example": {
+								"startTime": "10:00 A",
+								"endTime": "10:30 A"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m20011"
+								},
+								"example": {
+									"success": true,
+									"msg": "Time Slot created successfully",
+									"data": {
+										"deletedAt": null,
+										"deletedBy": null,
+										"_id": "62ce6bee37e91b0a80fddb2b",
+										"startTime": "10:00 A",
+										"endTime": "10:30 A",
+										"createdAt": "2022-07-13T06:53:34.046Z",
+										"updatedAt": "2022-07-13T06:53:34.046Z",
+										"__v": 0
+									}
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/timeSlot/update/{id}": {
+			"put": {
+				"tags": ["Time Slot"],
+				"summary": "UpdatetimeSlot",
+				"description": "Update time Slot",
+				"operationId": "UpdatetimeSlot",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdatetimeSlotRequest"
+							},
+							"example": {
+								"startTime": "10:10 A",
+								"endTime": "10:30 A"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m2002"
+								},
+								"example": {
+									"success": true,
+									"msg": "Time Slot update successfully",
+									"data": []
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/timeSlot/delete/{id}": {
+			"delete": {
+				"tags": ["Time Slot"],
+				"summary": "DeletetimeSlot",
+				"description": "Delete time Slot",
+				"operationId": "DeletetimeSlot",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m2002"
+								},
+								"example": {
+									"success": true,
+									"msg": "Time Slot delete successfully",
+									"data": []
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/timeSlot/get": {
+			"get": {
+				"tags": ["Time Slot"],
+				"summary": "GetTimeSlot",
+				"description": "Get Time Slot",
+				"operationId": "GetTimeSlot",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m20014"
+								},
+								"example": {
+									"success": true,
+									"msg": "Time Slot get successfully",
+									"data": [
+										{
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62ce6b4e887df22d203c5ff4",
+											"startTime": "10:00 A",
+											"endTime": "10:30 A",
+											"createdAt": "2022-07-13T06:50:54.541Z",
+											"updatedAt": "2022-07-13T06:50:54.541Z",
+											"__v": 0
+										}
+									],
+									"totalCount": 1
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/package/create": {
+			"post": {
+				"tags": ["Package Management"],
+				"summary": "CreatePackage",
+				"description": "Create Package",
+				"operationId": "CreatePackage",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CreatePackageRequest"
+							},
+							"example": {
+								"name": "test package11",
+								"description": "description package",
+								"priceByMonth": 10,
+								"priceByYear": 100,
+								"shortDescription": "test"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m2002"
+								},
+								"example": {
+									"success": true,
+									"msg": "Package created successfully",
+									"data": []
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/package/update/{id}": {
+			"put": {
+				"tags": ["Package Management"],
+				"summary": "UpdatePackage",
+				"description": "Update Package",
+				"operationId": "UpdatePackage",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdatePackageRequest"
+							},
+							"example": {
+								"name": "test package",
+								"description": "description package",
+								"priceByMonth": 10,
+								"priceByYear": 100,
+								"shortDescription": "aaa",
+								"image": "/images/package/1658486962368.png"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m2002"
+								},
+								"example": {
+									"success": true,
+									"msg": "Package update successfully",
+									"data": []
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/package/delete/{id}": {
+			"delete": {
+				"tags": ["Package Management"],
+				"summary": "deletepackage",
+				"description": "delete package",
+				"operationId": "deletepackage",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m2002"
+								},
+								"example": {
+									"success": true,
+									"msg": "Package delete successfully",
+									"data": []
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/package/get": {
+			"get": {
+				"tags": ["Package Management"],
+				"summary": "GetPackageSlot",
+				"description": "Get Package Slot",
+				"operationId": "GetPackageSlot",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m20018"
+								},
+								"example": {
+									"success": true,
+									"msg": "Package get successfully",
+									"data": [
+										{
+											"deletedAt": null,
+											"deletedBy": "628dfe26b34272ba6d1d1498",
+											"_id": "62d019b93f41638a7bc160d3",
+											"name": "test package1",
+											"description": "description package",
+											"priceByMonth": 10,
+											"priceByYear": 100,
+											"createdAt": "2022-07-14T13:27:21.870Z",
+											"updatedAt": "2022-07-14T13:34:41.536Z",
+											"__v": 0
+										},
+										{
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62d52ef706f372383b8a65fb",
+											"name": "test package",
+											"description": "description package",
+											"priceByMonth": 10,
+											"priceByYear": 100,
+											"shortDescription": "test",
+											"createdAt": "2022-07-18T09:59:19.109Z",
+											"updatedAt": "2022-07-18T09:59:19.109Z",
+											"__v": 0
+										}
+									],
+									"totalCount": 2
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/healthArticle/create": {
+			"post": {
+				"tags": ["Health Article"],
+				"summary": "AddHealthArticle",
+				"description": "Add Health Article",
+				"operationId": "AddHealthArticle",
+				"parameters": [
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"description": "",
+						"required": true,
+						"style": "simple",
+						"schema": {
+							"enum": ["application/x-www-form-urlencoded"],
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/x-www-form-urlencoded": {
+							"encoding": {},
+							"schema": {
+								"required": ["profileImage", "title", "description"],
+								"type": "object",
+								"properties": {
+									"profileImage": {
+										"type": "string"
+									},
+									"title": {
+										"type": "string",
+										"example": "Article 1"
+									},
+									"description": {
+										"type": "string",
+										"example": "Articla edescdsf"
+									}
+								}
+							}
+						}
+					},
+					"required": false
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m2007"
+								},
+								"example": {
+									"success": true,
+									"message": "Health Article created successfully",
+									"data": []
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/": {
+			"get": {
+				"tags": ["Health Article"],
+				"summary": "GetHealthArticle",
+				"description": "Get Health Article",
+				"operationId": "GetHealthArticle",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m20020"
+								},
+								"example": {
+									"success": true,
+									"message": "Health Article get successfully",
+									"data": [
+										{
+											"isEnabled": false,
+											"deletedAt": "2022-07-15T09:00:28.916Z",
+											"deletedBy": "62d12c93870bde3630ace515",
+											"_id": "62d12c93870bde3630ace515",
+											"title": "test",
+											"Description": "tet@test.com",
+											"profileImage": "public\\images\\1657875603404-Screenshot (1).png",
+											"createdAt": "2022-07-15T09:00:03.503Z",
+											"updatedAt": "2022-07-15T09:00:28.918Z",
+											"__v": 0
+										},
+										{
+											"isEnabled": true,
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62d12cc2870bde3630ace519",
+											"title": "demo",
+											"Description": "demo",
+											"profileImage": "public\\images\\1657875650221-Screenshot (1).png",
+											"createdAt": "2022-07-15T09:00:50.251Z",
+											"updatedAt": "2022-07-15T09:12:45.962Z",
+											"__v": 0
+										},
+										{
+											"isEnabled": true,
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62d132fe17eb851838f4fc17",
+											"title": "demo123",
+											"Description": "demo",
+											"profileImage": "public\\images\\1657877616039-Screenshot (2).png",
+											"createdAt": "2022-07-15T09:27:26.378Z",
+											"updatedAt": "2022-07-15T09:33:38.056Z",
+											"__v": 0
+										},
+										{
+											"isEnabled": true,
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62d14cb3face546bf00cba57",
+											"title": "Article 1",
+											"profileImage": "public/images/1657883827871-image (1).png",
+											"createdAt": "2022-07-15T11:17:07.916Z",
+											"updatedAt": "2022-07-15T11:17:07.916Z",
+											"__v": 0
+										}
+									],
+									"totalCount": 4
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/healthArticle/update/{id}": {
+			"put": {
+				"tags": ["Health Article"],
+				"summary": "UpdateHealthArticle",
+				"description": "Update Health Article",
+				"operationId": "UpdateHealthArticle",
+				"parameters": [
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"description": "",
+						"required": true,
+						"style": "simple",
+						"schema": {
+							"enum": ["application/x-www-form-urlencoded"],
+							"type": "string"
+						}
+					},
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"requestBody": {
+					"content": {
+						"application/x-www-form-urlencoded": {
+							"encoding": {},
+							"schema": {
+								"required": ["title", "description", "profileImage"],
+								"type": "object",
+								"properties": {
+									"title": {
+										"type": "string",
+										"example": "Article 1"
+									},
+									"description": {
+										"type": "string",
+										"example": "Articla edescdsf"
+									},
+									"profileImage": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					},
+					"required": false
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m2007"
+								},
+								"example": {
+									"success": true,
+									"message": "Health Article update successfully",
+									"data": []
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/healthArticle/delete/{id}": {
+			"delete": {
+				"tags": ["Health Article"],
+				"summary": "DeleteHealthArticle",
+				"description": "Delete Health Article",
+				"operationId": "DeleteHealthArticle",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m2007"
+								},
+								"example": {
+									"success": true,
+									"message": "Health Article update successfully",
+									"data": []
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/settings/create": {
+			"post": {
+				"tags": ["Settings"],
+				"summary": "AddSettings",
+				"description": "Add Settings",
+				"operationId": "AddSettings",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/AddSettingsRequest"
+							},
+							"example": {
+								"filedName": "timeSlot",
+								"filedValue": 5,
+								"filedType": "number"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m20023"
+								},
+								"example": {
+									"success": true,
+									"message": "Setting created successfully",
+									"data": {
+										"type": "NULL",
+										"isEnabled": true,
+										"deletedAt": null,
+										"deletedBy": null,
+										"_id": "62d1773e4875f5dbaf955c8d",
+										"filedName": "timeSlot",
+										"filedValue": "5",
+										"filedType": "number",
+										"createdAt": "2022-07-15T14:18:38.674Z",
+										"updatedAt": "2022-07-15T14:18:38.674Z",
+										"__v": 0
+									}
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/settings/get": {
+			"get": {
+				"tags": ["Settings"],
+				"summary": "GetAllsettings",
+				"description": "Get All settings",
+				"operationId": "GetAllsettings",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m20024"
+								},
+								"example": {
+									"message": "Setting get successfully",
+									"data": [
+										{
+											"type": "NULL",
+											"isEnabled": false,
+											"deletedAt": "2022-07-14T06:58:56.536Z",
+											"deletedBy": "62cea492266f8229a87aaaef",
+											"_id": "62cea492266f8229a87aaaef",
+											"content": "hellow world",
+											"filedName": "demoFiled",
+											"createdAt": "2022-07-13T10:55:14.379Z",
+											"updatedAt": "2022-07-14T06:58:56.537Z",
+											"__v": 0
+										},
+										{
+											"type": "PRIVCYPOLICY",
+											"isEnabled": false,
+											"deletedAt": "2022-07-14T06:59:10.983Z",
+											"deletedBy": "62cfbe03372c8e04b05d3006",
+											"_id": "62cfbe03372c8e04b05d3006",
+											"content": "test",
+											"filedName": "dispalysetting",
+											"filedValue": "demo",
+											"filedType": "demo",
+											"createdAt": "2022-07-14T06:56:03.914Z",
+											"updatedAt": "2022-07-14T06:59:10.984Z",
+											"__v": 0
+										},
+										{
+											"type": "PRIVCYPOLICY",
+											"isEnabled": false,
+											"deletedAt": "2022-07-14T06:57:55.418Z",
+											"deletedBy": "62cfbe40372c8e04b05d3008",
+											"_id": "62cfbe40372c8e04b05d3008",
+											"content": "test",
+											"filedName": "dispalysetting",
+											"filedValue": "demo",
+											"filedType": "demo",
+											"createdAt": "2022-07-14T06:57:04.532Z",
+											"updatedAt": "2022-07-14T06:57:55.427Z",
+											"__v": 0
+										},
+										{
+											"type": "PRIVCYPOLICY",
+											"isEnabled": false,
+											"deletedAt": "2022-07-14T07:09:23.967Z",
+											"deletedBy": "62cfc10e27a74f170c37bfae",
+											"_id": "62cfc10e27a74f170c37bfae",
+											"content": "test",
+											"filedName": "dispalysetting",
+											"filedValue": "demo",
+											"filedType": "demo",
+											"createdAt": "2022-07-14T07:09:02.363Z",
+											"updatedAt": "2022-07-14T07:09:23.973Z",
+											"__v": 0
+										},
+										{
+											"type": "PRIVCYPOLICY",
+											"isEnabled": false,
+											"deletedAt": "2022-07-14T07:10:42.422Z",
+											"deletedBy": "62cfc168c48275172c7207b3",
+											"_id": "62cfc168c48275172c7207b3",
+											"content": "test",
+											"filedName": "dispalysetting",
+											"filedValue": "demo",
+											"filedType": "demo",
+											"createdAt": "2022-07-14T07:10:32.628Z",
+											"updatedAt": "2022-07-14T07:10:42.432Z",
+											"__v": 0
+										},
+										{
+											"type": "PRIVCYPOLICY",
+											"isEnabled": true,
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62cfc17dc48275172c7207b7",
+											"content": "test",
+											"filedName": "dispalysetting",
+											"filedValue": "demo",
+											"filedType": "demo",
+											"createdAt": "2022-07-14T07:10:53.505Z",
+											"updatedAt": "2022-07-14T07:10:53.505Z",
+											"__v": 0
+										},
+										{
+											"type": "PRIVCYPOLICY",
+											"isEnabled": true,
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62cfd6e00771111b1c284316",
+											"content": "test",
+											"filedName": "dispalysetting",
+											"filedValue": "demo",
+											"filedType": "demo",
+											"createdAt": "2022-07-14T08:42:08.381Z",
+											"updatedAt": "2022-07-14T09:00:29.452Z",
+											"__v": 0
+										},
+										{
+											"type": "PRIVCYPOLICY",
+											"isEnabled": true,
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62cfdb4565ec59260ca147d9",
+											"content": "test",
+											"filedName": "dispalysetting",
+											"filedValue": "demo",
+											"filedType": "demo",
+											"createdAt": "2022-07-14T09:00:54.016Z",
+											"updatedAt": "2022-07-14T09:00:54.016Z",
+											"__v": 0
+										},
+										{
+											"type": "PRIVCYPOLICY",
+											"isEnabled": true,
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62cfdb5d65ec59260ca147db",
+											"content": "new",
+											"filedName": "dispalysetting",
+											"filedValue": "demo",
+											"filedType": "demo",
+											"createdAt": "2022-07-14T09:01:17.068Z",
+											"updatedAt": "2022-07-14T09:03:29.476Z",
+											"__v": 0
+										},
+										{
+											"type": "Null",
+											"isEnabled": true,
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62cfe087e72ce32be44ed065",
+											"content": "test",
+											"filedName": "dispalysetting",
+											"filedValue": "demo",
+											"filedType": "demo",
+											"createdAt": "2022-07-14T09:23:19.084Z",
+											"updatedAt": "2022-07-14T09:30:24.211Z",
+											"__v": 0
+										},
+										{
+											"type": "PRIVCYPOLICY",
+											"isEnabled": true,
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62cfe3c0cd5bfe20a8da72f6",
+											"content": "new",
+											"filedName": "dispalysetting",
+											"filedValue": "demo",
+											"filedType": "demo",
+											"createdAt": "2022-07-14T09:37:04.204Z",
+											"updatedAt": "2022-07-14T09:37:04.204Z",
+											"__v": 0
+										},
+										{
+											"type": "NULL",
+											"isEnabled": true,
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62d1773e4875f5dbaf955c8d",
+											"filedName": "timeSlot",
+											"filedValue": "5",
+											"filedType": "number",
+											"createdAt": "2022-07-15T14:18:38.674Z",
+											"updatedAt": "2022-07-15T14:18:38.674Z",
+											"__v": 0
+										}
+									],
+									"totalCount": 12
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/settings/update/{id}": {
+			"put": {
+				"tags": ["Settings"],
+				"summary": "UpdateSttings",
+				"description": "Update Sttings",
+				"operationId": "UpdateSttings",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/UpdateSttingsRequest"
+							},
+							"example": {
+								"type": "PRIVCYPOLICY",
+								"content": "<span>khdkha</span>"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m2007"
+								},
+								"example": {
+									"success": true,
+									"message": "Setting updating failed",
+									"data": []
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/settings/delete/{id}": {
+			"delete": {
+				"tags": ["Settings"],
+				"summary": "DeleteSettings",
+				"description": "Delete Settings",
+				"operationId": "DeleteSettings",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m2007"
+								},
+								"example": {
+									"success": true,
+									"message": "Setting delete successfully",
+									"data": []
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/faq/create": {
+			"post": {
+				"tags": ["faqs"],
+				"summary": "addFaqs",
+				"description": "add Faqs",
+				"operationId": "addFaqs",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"text/plain": {
+							"schema": {
+								"type": "object",
+								"example": {}
+							},
+							"example": {}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m20027"
+								},
+								"example": {
+									"status": true,
+									"msg": "Faq get successfully",
+									"data": [
+										{
+											"isEnabled": true,
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62d529f6df9913195ce553fb",
+											"question": "test",
+											"answer": "test",
+											"createdAt": "2022-07-18T09:37:58.334Z",
+											"updatedAt": "2022-07-18T09:37:58.334Z",
+											"__v": 0
+										}
+									],
+									"totalCount": 1
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false
+			},
+			"put": {
+				"tags": ["faqs"],
+				"summary": "updateFaqs",
+				"description": "update Faqs",
+				"operationId": "updateFaqs",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m20029"
+								},
+								"example": {
+									"status": true,
+									"msg": "Faq update successfully",
+									"data": []
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/faq/get": {
+			"get": {
+				"tags": ["faqs"],
+				"summary": "faqs",
+				"description": "faqs",
+				"operationId": "faqs",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m20027"
+								},
+								"example": {
+									"status": true,
+									"msg": "Faq get successfully",
+									"data": [
+										{
+											"isEnabled": true,
+											"deletedAt": null,
+											"deletedBy": null,
+											"_id": "62d529f6df9913195ce553fb",
+											"question": "test",
+											"answer": "test",
+											"createdAt": "2022-07-18T09:37:58.334Z",
+											"updatedAt": "2022-07-18T09:37:58.334Z",
+											"__v": 0
+										}
+									],
+									"totalCount": 1
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/faq/delete/{id}": {
+			"delete": {
+				"tags": ["faqs"],
+				"summary": "DeleteFaqs",
+				"description": "Delete Faqs",
+				"operationId": "DeleteFaqs",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/appointment/get": {
+			"get": {
+				"tags": ["Appointment"],
+				"summary": "GetAppointment",
+				"description": "Get Appointment",
+				"operationId": "GetAppointment",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m20031"
+								},
+								"example": {
+									"success": true,
+									"message": "Appointment get successfully",
+									"data": [
+										{
+											"symptoms": ["62b046d2d5debb823497dc1c"],
+											"isActive": true,
+											"drId": null,
+											"consultModel": "VIDEO",
+											"prescription": null,
+											"notes": null,
+											"deletedAt": null,
+											"deletedBy": null,
+											"isDeleted": false,
+											"_id": "62d65ebdf511bf5509c3b62c",
+											"date": "2022-07-19T02:30:00.000Z",
+											"startTime": "8:00 AM",
+											"endTime": "8:30 AM",
+											"patientId": "62d51064f411fb5f8a3c4716",
+											"price": 700,
+											"createdAt": "2022-07-19T07:35:25.733Z",
+											"updatedAt": "2022-07-19T07:35:25.733Z",
+											"__v": 0
+										},
+										{
+											"symptoms": ["62b046d2d5debb823497dc1c"],
+											"isActive": true,
+											"drId": null,
+											"consultModel": "VIDEO",
+											"prescription": null,
+											"notes": null,
+											"deletedAt": null,
+											"deletedBy": null,
+											"isDeleted": false,
+											"_id": "62d668a1f511bf5509c3b632",
+											"date": "2023-07-19T18:30:00.000Z",
+											"startTime": "8:00 A",
+											"endTime": "8:30 A",
+											"patientId": "62d51064f411fb5f8a3c4716",
+											"price": 700,
+											"createdAt": "2022-07-19T08:17:37.343Z",
+											"updatedAt": "2022-07-19T08:18:14.205Z",
+											"__v": 0
+										}
+									],
+									"totalCount": 2
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/appointment/update/{id}": {
+			"put": {
+				"tags": ["Appointment"],
+				"summary": "AppointmentUpdate",
+				"description": "Appointment Update",
+				"operationId": "AppointmentUpdate",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/AppointmentUpdateRequest"
+							},
+							"example": {
+								"date": "08-18-2022",
+								"startTime": "8:00 A",
+								"endTime": "8:30 A",
+								"pain": ["62b046d2d5debb823497dc1c"]
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m20032"
+								},
+								"example": {
+									"date": "08-18-2022",
+									"startTime": "8:00 A",
+									"endTime": "8:30 A",
+									"pain": ["62b046d2d5debb823497dc1c"]
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/appointment/delete/{id}": {
+			"delete": {
+				"tags": ["Appointment"],
+				"summary": "AppointmentDelete",
+				"description": "Appointment Delete",
+				"operationId": "AppointmentDelete",
+				"parameters": [
+					{
+						"in": "path",
+						"name": "id",
+						"required": true,
+						"schema": { "type": "string" }
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"headers": {},
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/m2002"
+								},
+								"example": {
+									"success": true,
+									"msg": "Appointment delete successfully",
+									"data": []
+								}
+							}
+						}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/payment/create": {
+			"post": {
+				"tags": ["payment"],
+				"summary": "addPayment",
+				"description": "add Payment",
+				"operationId": "addPayment",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/addPaymentRequest"
+							},
+							"example": {
+								"appointmentId": "62d65df0f511bf5509c3b622",
+								"paymentId": "pay_Jva8VkThS76MEa"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/image/upload": {
+			"post": {
+				"tags": ["Image Uplod"],
+				"summary": "imageUpload",
+				"description": "image Upload",
+				"operationId": "imageUpload",
+				"parameters": [
+					{
+						"name": "field",
+						"in": "query",
+						"description": "",
+						"required": true,
+						"style": "form",
+						"explode": true,
+						"schema": {
+							"type": "string",
+							"example": "profile"
+						}
+					},
+					{
+						"name": "Content-Type",
+						"in": "header",
+						"description": "",
+						"required": true,
+						"style": "simple",
+						"schema": {
+							"enum": ["multipart/form-data"],
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"content": {
+						"multipart/form-data": {
+							"encoding": {},
+							"schema": {
+								"required": ["file"],
+								"type": "object",
+								"properties": {
+									"file": {
+										"type": "file"
+									}
+								}
+							}
+						}
+					},
+					"required": false
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		},
+		"/monthlyTimeSlot/create": {
+			"post": {
+				"tags": ["Get all time SLot"],
+				"summary": "MonthlyTimeSlotCreate",
+				"description": "Monthly TimeSlot Create",
+				"operationId": "MonthlyTimeSlotCreate",
+				"parameters": [],
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false,
+				"security": [
+					{
+						"bearer": []
+					}
+				]
+			}
+		},
+		"/monthlyTimeSlot/get": {
+			"post": {
+				"tags": ["Get all time SLot"],
+				"summary": "GetTimeSlotBYToday",
+				"description": "Get TimeSlotBY Today",
+				"operationId": "GetTimeSlotBYToday",
+				"parameters": [],
+				"requestBody": {
+					"description": "",
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/GetTimeSlotBYTodayRequest"
+							},
+							"example": {
+								"date": "2022-07-27"
+							}
+						}
+					},
+					"required": true
+				},
+				"responses": {
+					"200": {
+						"description": "",
+						"headers": {},
+						"content": {}
+					}
+				},
+				"deprecated": false
+			}
+		}
+	},
+	"components": {
+		"schemas": {
+			"PermissionsCreateRequest": {
+				"title": "PermissionsCreateRequest",
+				"required": ["path", "displayName"],
+				"type": "object",
+				"properties": {
+					"path": {
+						"type": "string"
+					},
+					"displayName": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"path": "employee-service/restore/:id",
+					"displayName": "restore sallone Employee  Service"
+				}
+			},
+			"UpdatePermissionsRequest": {
+				"title": "UpdatePermissionsRequest",
+				"required": ["path", "createdBy", "displayName"],
+				"type": "object",
+				"properties": {
+					"path": {
+						"type": "string"
+					},
+					"createdBy": {
+						"type": "string"
+					},
+					"displayName": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"path": "website_header/get",
+					"createdBy": "6107cc835e94d0bc7dd9f1c2",
+					"displayName": "Get Header"
+				}
+			},
+			"CreateRoleRequest": {
+				"title": "CreateRoleRequest",
+				"required": ["name", "permissions"],
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"permissions": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": ""
+					}
+				},
+				"example": {
+					"name": "EDITOR",
+					"permissions": ["6110d5db84d4803c28737723"]
+				}
+			},
+			"updateRoleRequest": {
+				"title": "updateRoleRequest",
+				"required": ["name", "createdBy", "permissions"],
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"createdBy": {
+						"type": "string"
+					},
+					"permissions": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": ""
+					}
+				},
+				"example": {
+					"name": "SUPER_USER",
+					"createdBy": "6107cc835e94d0bc7dd9f1c2",
+					"permissions": [
+						"610d0b608308ca8cce20c41f",
+						"610d0b608308ca8cce20c420",
+						"610d0b608308ca8cce20c421",
+						"610d0b608308ca8cce20c422",
+						"610d0b608308ca8cce20c423",
+						"610d0b608308ca8cce20c424",
+						"610d0b608308ca8cce20c425",
+						"610d0b608308ca8cce20c426",
+						"610d0b608308ca8cce20c427",
+						"610d0b608308ca8cce20c428",
+						"610d0b608308ca8cce20c429",
+						"610d0b608308ca8cce20c42a",
+						"610d0b608308ca8cce20c42b",
+						"610d0b608308ca8cce20c42c",
+						"610d0b608308ca8cce20c42d",
+						"610d0b608308ca8cce20c42e",
+						"610d0b608308ca8cce20c42f",
+						"610d0b608308ca8cce20c430",
+						"610d0b608308ca8cce20c431",
+						"610d0b608308ca8cce20c432",
+						"610d0b608308ca8cce20c433",
+						"610d0b608308ca8cce20c434",
+						"610d0b608308ca8cce20c435",
+						"610d0b608308ca8cce20c436",
+						"610d0b608308ca8cce20c437",
+						"610d0b608308ca8cce20c438",
+						"610d0b608308ca8cce20c439",
+						"610d0b608308ca8cce20c43a",
+						"610d0b608308ca8cce20c43b",
+						"610d0b608308ca8cce20c43c",
+						"610d0b608308ca8cce20c43d",
+						"610d0b608308ca8cce20c43e",
+						"610d0b608308ca8cce20c43f",
+						"610d0b608308ca8cce20c440",
+						"610d0b608308ca8cce20c441",
+						"610d0b608308ca8cce20c442",
+						"610d0b608308ca8cce20c443",
+						"610d0b608308ca8cce20c444",
+						"610d0b608308ca8cce20c445",
+						"610d0b608308ca8cce20c446",
+						"610d0b608308ca8cce20c447",
+						"610d0b608308ca8cce20c448",
+						"610d0b618308ca8cce20c449",
+						"610d0b618308ca8cce20c44a",
+						"610d0b618308ca8cce20c44b",
+						"610d0b618308ca8cce20c44c",
+						"610d0b618308ca8cce20c44d",
+						"610d0b618308ca8cce20c44e",
+						"610d0b618308ca8cce20c44f",
+						"610d0b618308ca8cce20c450",
+						"610d0b618308ca8cce20c451",
+						"610d0b618308ca8cce20c452",
+						"610d0b618308ca8cce20c453",
+						"610d0b618308ca8cce20c454",
+						"610d0b618308ca8cce20c455",
+						"6110c1ed170cf61a4c8d3e47",
+						"6110d11772f7ae3890564085",
+						"6110d0b3449850384837abc4"
+					]
+				}
+			},
+			"CreateAdminUserRequest": {
+				"title": "CreateAdminUserRequest",
+				"required": ["name", "email", "role", "profileImage"],
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"role": {
+						"type": "string"
+					},
+					"profileImage": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"name": "Tushar20",
+					"email": "tushar20@mailinator.com",
+					"role": "6110d7992b1f633dfe13b7a6",
+					"profileImage": "aaa"
+				}
+			},
+			"LoginAdminUserRequest": {
+				"title": "LoginAdminUserRequest",
+				"required": ["email", "password"],
+				"type": "object",
+				"properties": {
+					"email": {
+						"type": "string"
+					},
+					"password": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"email": "developer#123@example.com",
+					"password": "developer@123"
+				}
+			},
+			"UpdateStatusAdminUserRequest": {
+				"title": "UpdateStatusAdminUserRequest",
+				"required": ["name", "role", "profileImage"],
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"role": {
+						"type": "string"
+					},
+					"profileImage": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"name": "Tushar14",
+					"role": "610b763ec7b7c82dac1763b7",
+					"profileImage": "aaa"
+				}
+			},
+			"ChangePasswordAdminUserRequest": {
+				"title": "ChangePasswordAdminUserRequest",
+				"required": ["oldPassword", "newPassword"],
+				"type": "object",
+				"properties": {
+					"oldPassword": {
+						"type": "string"
+					},
+					"newPassword": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"oldPassword": "superUser@123",
+					"newPassword": "superUser@123"
+				}
+			},
+			"ForgetPasswordRequest": {
+				"title": "ForgetPasswordRequest",
+				"required": ["email"],
+				"type": "object",
+				"properties": {
+					"email": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"email": "tushar18@mailinator.com"
+				}
+			},
+			"ResetPasswordRequest": {
+				"title": "ResetPasswordRequest",
+				"required": ["email", "newPassword"],
+				"type": "object",
+				"properties": {
+					"email": {
+						"type": "string"
+					},
+					"newPassword": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"email": "tushar18@mailinator.com",
+					"newPassword": "123456"
+				}
+			},
+			"CreateCustomerRequest": {
+				"title": "CreateCustomerRequest",
+				"required": ["name", "email", "mobileNumber", "type"],
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"mobileNumber": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"name": "customer2",
+					"email": "customer2@gmail.com",
+					"mobileNumber": "+917383801752",
+					"type": "CUSTOMER"
+				}
+			},
+			"VerifyCustomerRequest": {
+				"title": "VerifyCustomerRequest",
+				"required": ["email", "type", "otp"],
+				"type": "object",
+				"properties": {
+					"email": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					},
+					"otp": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"email": "customer1@gmail.com",
+					"type": "CUSTOMER",
+					"otp": 9571
+				}
+			},
+			"m200": {
+				"title": "m200",
+				"required": ["success", "msg", "data", "totalCount"],
+				"type": "object",
+				"properties": {
+					"success": {
+						"type": "boolean"
+					},
+					"msg": {
+						"type": "string"
+					},
+					"data": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/Datum"
+						},
+						"description": ""
+					},
+					"totalCount": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"success": true,
+					"msg": "User get successfully",
+					"data": [
+						{
+							"email": "tanveedadhaneeya32@gmail.com",
+							"otp": 432007118,
+							"gender": "NULL",
+							"fireBaseToken": null,
+							"profileImage": null,
+							"password": "$2b$10$K0hhdmAe5AtLD0M0rpMxzOAY7mhq.61aJ7V9NKT6mf1k4ADVgb7Ca",
+							"salt": "$2b$10$K0hhdmAe5AtLD0M0rpMxzO",
+							"addedBy": null,
+							"isEnabled": false,
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "629d9858326ee12ab8200d78",
+							"name": "tanvi dadhaniya",
+							"mobileNumber": "+919726201932",
+							"createdAt": "2022-06-06T06:02:00.207Z",
+							"updatedAt": "2022-06-06T06:02:00.207Z",
+							"__v": 0
+						}
+					],
+					"totalCount": 1
+				}
+			},
+			"Datum": {
+				"title": "Datum",
+				"required": [
+					"email",
+					"otp",
+					"gender",
+					"fireBaseToken",
+					"profileImage",
+					"password",
+					"salt",
+					"addedBy",
+					"isEnabled",
+					"deletedAt",
+					"deletedBy",
+					"_id",
+					"name",
+					"mobileNumber",
+					"createdAt",
+					"updatedAt",
+					"__v"
+				],
+				"type": "object",
+				"properties": {
+					"email": {
+						"type": "string"
+					},
+					"otp": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"gender": {
+						"type": "string"
+					},
+					"fireBaseToken": {
+						"type": "string",
+						"nullable": true
+					},
+					"profileImage": {
+						"type": "string",
+						"nullable": true
+					},
+					"password": {
+						"type": "string"
+					},
+					"salt": {
+						"type": "string"
+					},
+					"addedBy": {
+						"type": "string",
+						"nullable": true
+					},
+					"isEnabled": {
+						"type": "boolean"
+					},
+					"deletedAt": {
+						"type": "string",
+						"nullable": true
+					},
+					"deletedBy": {
+						"type": "string",
+						"nullable": true
+					},
+					"_id": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"mobileNumber": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					},
+					"__v": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"email": "tanveedadhaneeya32@gmail.com",
+					"otp": 432007118,
+					"gender": "NULL",
+					"fireBaseToken": null,
+					"profileImage": null,
+					"password": "$2b$10$K0hhdmAe5AtLD0M0rpMxzOAY7mhq.61aJ7V9NKT6mf1k4ADVgb7Ca",
+					"salt": "$2b$10$K0hhdmAe5AtLD0M0rpMxzO",
+					"addedBy": null,
+					"isEnabled": false,
+					"deletedAt": null,
+					"deletedBy": null,
+					"_id": "629d9858326ee12ab8200d78",
+					"name": "tanvi dadhaniya",
+					"mobileNumber": "+919726201932",
+					"createdAt": "2022-06-06T06:02:00.207Z",
+					"updatedAt": "2022-06-06T06:02:00.207Z",
+					"__v": 0
+				}
+			},
+			"Dr.CreateRequest": {
+				"title": "Dr.CreateRequest",
+				"required": ["name", "email", "mobileNumber", "type"],
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"email": {
+						"type": "string"
+					},
+					"mobileNumber": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"name": "customer1",
+					"email": "customer1@gmail.com",
+					"mobileNumber": "+917383801751",
+					"type": "CUSTOMER"
+				}
+			},
+			"VerifyDrRequest": {
+				"title": "VerifyDrRequest",
+				"required": ["email", "type", "otp"],
+				"type": "object",
+				"properties": {
+					"email": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					},
+					"otp": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"email": "customer4@gmail.com",
+					"type": "CUSTOMER",
+					"otp": 1901
+				}
+			},
+			"AssignTimeSlotRequest": {
+				"title": "AssignTimeSlotRequest",
+				"required": ["drId", "timeSlot"],
+				"type": "object",
+				"properties": {
+					"drId": {
+						"type": "string"
+					},
+					"timeSlot": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": ""
+					}
+				},
+				"example": {
+					"drId": "62d95849c1da0d310474a30d",
+					"timeSlot": [
+						"62d7a59a9492b434857b8e4a",
+						"62d7a5b99492b434857b8e50",
+						"62d7a5cf9492b434857b8e56",
+						"62d7a5de9492b434857b8e5c",
+						"62d7a64a9492b434857b8e62",
+						"62d7a65d9492b434857b8e68",
+						"62d7a66c9492b434857b8e6e",
+						"62d7a67a9492b434857b8e74"
+					]
+				}
+			},
+			"AssignTimeSlot": {
+				"title": "AssignTimeSlot",
+				"required": ["success", "msg", "data"],
+				"type": "object",
+				"properties": {
+					"success": {
+						"type": "boolean"
+					},
+					"msg": {
+						"type": "string"
+					},
+					"data": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": ""
+					}
+				},
+				"example": {
+					"success": true,
+					"msg": "Time Slot assign successfully",
+					"data": []
+				}
+			},
+			"m2001": {
+				"title": "m2001",
+				"required": ["success", "msg", "data", "totalCount"],
+				"type": "object",
+				"properties": {
+					"success": {
+						"type": "boolean"
+					},
+					"msg": {
+						"type": "string"
+					},
+					"data": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/Datum1"
+						},
+						"description": ""
+					},
+					"totalCount": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"success": true,
+					"msg": "Doctor get successfully",
+					"data": [
+						{
+							"email": "savaliyatushar2197@gmail.com",
+							"gender": "NULL",
+							"mainStream": null,
+							"specialization": null,
+							"fireBaseToken": null,
+							"profileImage": null,
+							"password": "$2b$10$E/FMUUWGJFTArw0gTa5iaOc1GYQhJ/79GYZNZYC8YhVlpkCqsSQ6q",
+							"salt": "$2b$10$E/FMUUWGJFTArw0gTa5iaO",
+							"addedBy": null,
+							"designation": null,
+							"timeSlot": [
+								"62ce6b4e887df22d203c5ff4",
+								"62ceb08ae87bb632e05ca32f"
+							],
+							"isEnabled": true,
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62ceb0fee87bb632e05ca33e",
+							"name": "tushar Savaliya",
+							"mobileNumber": "+918980514085",
+							"otp": 4550,
+							"createdAt": "2022-07-13T11:48:14.877Z",
+							"updatedAt": "2022-07-13T12:00:46.691Z",
+							"__v": 0
+						}
+					],
+					"totalCount": 1
+				}
+			},
+			"Datum1": {
+				"title": "Datum1",
+				"required": [
+					"email",
+					"gender",
+					"mainStream",
+					"specialization",
+					"fireBaseToken",
+					"profileImage",
+					"password",
+					"salt",
+					"addedBy",
+					"designation",
+					"timeSlot",
+					"isEnabled",
+					"deletedAt",
+					"deletedBy",
+					"_id",
+					"name",
+					"mobileNumber",
+					"otp",
+					"createdAt",
+					"updatedAt",
+					"__v"
+				],
+				"type": "object",
+				"properties": {
+					"email": {
+						"type": "string"
+					},
+					"gender": {
+						"type": "string"
+					},
+					"mainStream": {
+						"type": "string",
+						"nullable": true
+					},
+					"specialization": {
+						"type": "string",
+						"nullable": true
+					},
+					"fireBaseToken": {
+						"type": "string",
+						"nullable": true
+					},
+					"profileImage": {
+						"type": "string",
+						"nullable": true
+					},
+					"password": {
+						"type": "string"
+					},
+					"salt": {
+						"type": "string"
+					},
+					"addedBy": {
+						"type": "string",
+						"nullable": true
+					},
+					"designation": {
+						"type": "string",
+						"nullable": true
+					},
+					"timeSlot": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": ""
+					},
+					"isEnabled": {
+						"type": "boolean"
+					},
+					"deletedAt": {
+						"type": "string",
+						"nullable": true
+					},
+					"deletedBy": {
+						"type": "string",
+						"nullable": true
+					},
+					"_id": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"mobileNumber": {
+						"type": "string"
+					},
+					"otp": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					},
+					"__v": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"email": "savaliyatushar2197@gmail.com",
+					"gender": "NULL",
+					"mainStream": null,
+					"specialization": null,
+					"fireBaseToken": null,
+					"profileImage": null,
+					"password": "$2b$10$E/FMUUWGJFTArw0gTa5iaOc1GYQhJ/79GYZNZYC8YhVlpkCqsSQ6q",
+					"salt": "$2b$10$E/FMUUWGJFTArw0gTa5iaO",
+					"addedBy": null,
+					"designation": null,
+					"timeSlot": ["62ce6b4e887df22d203c5ff4", "62ceb08ae87bb632e05ca32f"],
+					"isEnabled": true,
+					"deletedAt": null,
+					"deletedBy": null,
+					"_id": "62ceb0fee87bb632e05ca33e",
+					"name": "tushar Savaliya",
+					"mobileNumber": "+918980514085",
+					"otp": 4550,
+					"createdAt": "2022-07-13T11:48:14.877Z",
+					"updatedAt": "2022-07-13T12:00:46.691Z",
+					"__v": 0
+				}
+			},
+			"m2002": {
+				"title": "m2002",
+				"required": ["success", "msg", "data"],
+				"type": "object",
+				"properties": {
+					"success": {
+						"type": "boolean"
+					},
+					"msg": {
+						"type": "string"
+					},
+					"data": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": ""
+					}
+				},
+				"example": {
+					"success": true,
+					"msg": "Doctor delete successfully",
+					"data": []
+				}
+			},
+			"socialloginrequest": {
+				"title": "socialloginrequest",
+				"required": ["token", "type"],
+				"type": "object",
+				"properties": {
+					"token": {
+						"type": "string"
+					},
+					"type": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImNkNjcyYTI5OGRkNTk3NzYyMTJlNmE2ZDgzZmI4YTllNjBmZjNiZWYifQ.eyJpc3MiOiJodHRwczpcL1wvd3d3LmZhY2Vib29rLmNvbSIsImF1ZCI6IjEwOTYwMTA0MzQzMzgxOTIiLCJzdWIiOiIxNDUxMTA5MTg1MzAxNTU0IiwiaWF0IjoxNjU4MzIyMTI3LCJleHAiOjE2NTgzMjU3MjcsImp0aSI6IkRJMFguZDlmMWU3ODZjOTc5OTNkNTk1ODMxZTc1ZTAyNzc0YmNmZDQyODVjMDE5NzFkOGQ4M2NmNWE1M2UzNTJkZTEzMiIsIm5vbmNlIjoibXlfbm9uY2UiLCJlbWFpbCI6InBpcGFsaXlhc2Fua2V0MVx1MDA0MGdtYWlsLmNvbSIsImdpdmVuX25hbWUiOiJTYW5rZXQiLCJmYW1pbHlfbmFtZSI6IlBpcGFsaXlhIiwibmFtZSI6IlNhbmtldCBQaXBhbGl5YSIsInBpY3R1cmUiOiJodHRwczpcL1wvcGxhdGZvcm0tbG9va2FzaWRlLmZic2J4LmNvbVwvcGxhdGZvcm1cL3Byb2ZpbGVwaWNcLz9hc2lkPTE0NTExMDkxODUzMDE1NTQmaGVpZ2h0PTEwMCZ3aWR0aD0xMDAmZXh0PTE2NjA5MTQxMjgmaGFzaD1BZVNVUmR5QVYzX3NaLVkwRDBVIn0.fzXmN3ivyVpq3cWjPV94lgk3iimF6dsl4PnhfvGj2WntwXG8VUJ6o_VEM_Tau_Un6Un_JUl1TnKMM-4ljtCNlEn4YXfGpSHXwatZ22X7UyRjxTTBZezloUw_sFrolSWz_ys9NsKWfGvO8WBLbekppE6bJNUzVe-jCrkLmY7fOVc2IguVg36VWcyIsZAvdeGzsIC5rm3D9jRg8h2HJuTpH5NB2X58Vq8enMv9ZzwGKmRkkFmpUDEyMXGMUZ6eH622-Ngn2hfHIQJIaJFMLEVNxpQMD7GGKNyKSRpuqHK-E-T95Ug-KG1wha6hwi-G_t8So7T2Vqpl8XOCcpJMVRd_Jw",
+					"type": "CUSTOMER"
+				}
+			},
+			"m2003": {
+				"title": "m2003",
+				"required": ["success", "msg", "data"],
+				"type": "object",
+				"properties": {
+					"success": {
+						"type": "boolean"
+					},
+					"msg": {
+						"type": "string"
+					},
+					"data": {
+						"$ref": "#/components/schemas/Data"
+					}
+				},
+				"example": {
+					"success": true,
+					"msg": "Speciality created successfully",
+					"data": {
+						"image": "appointment_book/1657696866655-image (4).png",
+						"status": "AVAILABLE",
+						"deletedAt": null,
+						"deletedBy": null,
+						"_id": "62ce726328b7481c283e1c77",
+						"name": " Back Pain",
+						"price": 700,
+						"time": "9:00 AM to 5:00 PM",
+						"createdAt": "2022-07-13T07:21:07.024Z",
+						"updatedAt": "2022-07-13T07:21:07.024Z",
+						"__v": 0
+					}
+				}
+			},
+			"Data": {
+				"title": "Data",
+				"required": [
+					"image",
+					"status",
+					"deletedAt",
+					"deletedBy",
+					"_id",
+					"name",
+					"price",
+					"time",
+					"createdAt",
+					"updatedAt",
+					"__v"
+				],
+				"type": "object",
+				"properties": {
+					"image": {
+						"type": "string"
+					},
+					"status": {
+						"type": "string"
+					},
+					"deletedAt": {
+						"type": "string",
+						"nullable": true
+					},
+					"deletedBy": {
+						"type": "string",
+						"nullable": true
+					},
+					"_id": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"price": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"time": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					},
+					"__v": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"image": "appointment_book/1657696866655-image (4).png",
+					"status": "AVAILABLE",
+					"deletedAt": null,
+					"deletedBy": null,
+					"_id": "62ce726328b7481c283e1c77",
+					"name": " Back Pain",
+					"price": 700,
+					"time": "9:00 AM to 5:00 PM",
+					"createdAt": "2022-07-13T07:21:07.024Z",
+					"updatedAt": "2022-07-13T07:21:07.024Z",
+					"__v": 0
+				}
+			},
+			"m2005": {
+				"title": "m2005",
+				"required": ["success", "data", "totalCount"],
+				"type": "object",
+				"properties": {
+					"success": {
+						"type": "boolean"
+					},
+					"data": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/Data"
+						},
+						"description": ""
+					},
+					"totalCount": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"success": true,
+					"data": [
+						{
+							"image": "appointment_book/1655721158301-img.png",
+							"status": "Available",
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62b046d2d5debb823497dc1c",
+							"name": " Back Pain ",
+							"price": 700,
+							"time": "9:00 AM to 5:00 PM",
+							"createdAt": "2022-06-20T10:07:15.090Z",
+							"updatedAt": "2022-06-20T10:32:39.125Z",
+							"__v": 0
+						},
+						{
+							"image": "appointment_book/1657696907620-image (1).png",
+							"status": "Available",
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62ce726328b7481c283e1c77",
+							"name": " Back Pain ",
+							"price": 700,
+							"time": "9:00 AM to 5:00 PM",
+							"createdAt": "2022-07-13T07:21:07.024Z",
+							"updatedAt": "2022-07-13T07:21:48.467Z",
+							"__v": 0
+						}
+					],
+					"totalCount": 2
+				}
+			},
+			"deletespecialityrequest": {
+				"title": "deletespecialityrequest",
+				"required": ["name", "status", "time", "price", "image"],
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"status": {
+						"type": "string"
+					},
+					"time": {
+						"type": "string"
+					},
+					"price": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"image": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"name": "Back Pain",
+					"status": "Available",
+					"time": "9:00 AM to 7:00 PM",
+					"price": 700,
+					"image": "src/images/Back-Pain.png"
+				}
+			},
+			"AssignSpecilityRequest": {
+				"title": "AssignSpecilityRequest",
+				"required": ["drId", "specialization"],
+				"type": "object",
+				"properties": {
+					"drId": {
+						"type": "string"
+					},
+					"specialization": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": ""
+					}
+				},
+				"example": {
+					"drId": "62d79c50497aec23b99c75cd",
+					"specialization": ["62ce726328b7481c283e1c77"]
+				}
+			},
+			"CreateConsultRequest": {
+				"title": "CreateConsultRequest",
+				"required": ["name"],
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"name": "phone"
+				}
+			},
+			"createlanguagerequest": {
+				"title": "createlanguagerequest",
+				"required": ["name"],
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"name": "gujarati"
+				}
+			},
+			"UpdateLanguageRequest": {
+				"title": "UpdateLanguageRequest",
+				"required": ["name"],
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"name": "english"
+				}
+			},
+			"UpdateConsultRequest": {
+				"title": "UpdateConsultRequest",
+				"required": ["name"],
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"name": "text edit"
+				}
+			},
+			"createnotificationtyperequest": {
+				"title": "createnotificationtyperequest",
+				"required": ["type", "message"],
+				"type": "object",
+				"properties": {
+					"type": {
+						"type": "string"
+					},
+					"message": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"type": "SMS",
+					"message": "Hello, This is gental reminder for you appointment"
+				}
+			},
+			"updatenotificationtyperequest": {
+				"title": "updatenotificationtyperequest",
+				"required": ["type", "message"],
+				"type": "object",
+				"properties": {
+					"type": {
+						"type": "string"
+					},
+					"message": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"type": "SMS",
+					"message": "Hello, This is gental reminder for you appointment !"
+				}
+			},
+			"deletenotificationtyperequest": {
+				"title": "deletenotificationtyperequest",
+				"required": ["type", "message"],
+				"type": "object",
+				"properties": {
+					"type": {
+						"type": "string"
+					},
+					"message": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"type": "SMS",
+					"message": "Hello, This is gental reminder for you appointment !"
+				}
+			},
+			"AdddeviceRequest": {
+				"title": "AdddeviceRequest",
+				"required": [
+					"deviceId",
+					"deviceName",
+					"deviceType",
+					"deviceModal",
+					"treatment"
+				],
+				"type": "object",
+				"properties": {
+					"deviceId": {
+						"type": "string"
+					},
+					"deviceName": {
+						"type": "string"
+					},
+					"deviceType": {
+						"type": "string"
+					},
+					"deviceModal": {
+						"type": "string"
+					},
+					"treatment": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"deviceId": "aaaa",
+					"deviceName": "spring",
+					"deviceType": "aaa",
+					"deviceModal": "tm005a",
+					"treatment": "aaaa"
+				}
+			},
+			"m500": {
+				"title": "m500",
+				"required": ["success", "message"],
+				"type": "object",
+				"properties": {
+					"success": {
+						"type": "boolean"
+					},
+					"message": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"success": false,
+					"message": "Device Already available"
+				}
+			},
+			"m2007": {
+				"title": "m2007",
+				"required": ["success", "message", "data"],
+				"type": "object",
+				"properties": {
+					"success": {
+						"type": "boolean"
+					},
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": ""
+					}
+				},
+				"example": {
+					"success": true,
+					"message": "Device created successfully",
+					"data": []
+				}
+			},
+			"m2008": {
+				"title": "m2008",
+				"required": ["message", "data", "totalCount"],
+				"type": "object",
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/Data3"
+						},
+						"description": ""
+					},
+					"totalCount": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"message": "Device get successfully",
+					"data": [
+						{
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62cd7a643ad98c1bb0ffd8e8",
+							"deviceId": "aaaa",
+							"deviceType": "aaa",
+							"deviceName": "spring",
+							"deviceModal": "tm005a",
+							"treatment": "aaaa",
+							"createdAt": "2022-07-12T13:43:00.881Z",
+							"updatedAt": "2022-07-12T13:43:00.881Z",
+							"__v": 0
+						},
+						{
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62ce7381e3b02d3b305c4caf",
+							"deviceId": "aaaaa",
+							"deviceType": "aaa",
+							"deviceName": "spring",
+							"deviceModal": "tm005a",
+							"treatment": "aaaa",
+							"createdAt": "2022-07-13T07:25:53.661Z",
+							"updatedAt": "2022-07-13T07:25:53.661Z",
+							"__v": 0
+						}
+					],
+					"totalCount": 2
+				}
+			},
+			"Data3": {
+				"title": "Data3",
+				"required": [
+					"deletedAt",
+					"deletedBy",
+					"_id",
+					"deviceId",
+					"deviceType",
+					"deviceName",
+					"deviceModal",
+					"treatment",
+					"createdAt",
+					"updatedAt",
+					"__v"
+				],
+				"type": "object",
+				"properties": {
+					"deletedAt": {
+						"type": "string",
+						"nullable": true
+					},
+					"deletedBy": {
+						"type": "string",
+						"nullable": true
+					},
+					"_id": {
+						"type": "string"
+					},
+					"deviceId": {
+						"type": "string"
+					},
+					"deviceType": {
+						"type": "string"
+					},
+					"deviceName": {
+						"type": "string"
+					},
+					"deviceModal": {
+						"type": "string"
+					},
+					"treatment": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					},
+					"__v": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"deletedAt": null,
+					"deletedBy": null,
+					"_id": "62cd7a643ad98c1bb0ffd8e8",
+					"deviceId": "aaaa",
+					"deviceType": "aaa",
+					"deviceName": "spring",
+					"deviceModal": "tm005a",
+					"treatment": "aaaa",
+					"createdAt": "2022-07-12T13:43:00.881Z",
+					"updatedAt": "2022-07-12T13:43:00.881Z",
+					"__v": 0
+				}
+			},
+			"UpdatedeviceRequest": {
+				"title": "UpdatedeviceRequest",
+				"required": ["deviceName", "deviceType", "deviceModal", "treatment"],
+				"type": "object",
+				"properties": {
+					"deviceName": {
+						"type": "string"
+					},
+					"deviceType": {
+						"type": "string"
+					},
+					"deviceModal": {
+						"type": "string"
+					},
+					"treatment": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"deviceName": "fddddff",
+					"deviceType": "aaa",
+					"deviceModal": "tm005a",
+					"treatment": "aaaa"
+				}
+			},
+			"CreatetimeSlotRequest": {
+				"title": "CreatetimeSlotRequest",
+				"required": ["startTime", "endTime"],
+				"type": "object",
+				"properties": {
+					"startTime": {
+						"type": "string"
+					},
+					"endTime": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"startTime": "10:00 A",
+					"endTime": "10:30 A"
+				}
+			},
+			"m20011": {
+				"title": "m20011",
+				"required": ["success", "msg", "data"],
+				"type": "object",
+				"properties": {
+					"success": {
+						"type": "boolean"
+					},
+					"msg": {
+						"type": "string"
+					},
+					"data": {
+						"$ref": "#/components/schemas/Data4"
+					}
+				},
+				"example": {
+					"success": true,
+					"msg": "Time Slot created successfully",
+					"data": {
+						"deletedAt": null,
+						"deletedBy": null,
+						"_id": "62ce6bee37e91b0a80fddb2b",
+						"startTime": "10:00 A",
+						"endTime": "10:30 A",
+						"createdAt": "2022-07-13T06:53:34.046Z",
+						"updatedAt": "2022-07-13T06:53:34.046Z",
+						"__v": 0
+					}
+				}
+			},
+			"Data4": {
+				"title": "Data4",
+				"required": [
+					"deletedAt",
+					"deletedBy",
+					"_id",
+					"startTime",
+					"endTime",
+					"createdAt",
+					"updatedAt",
+					"__v"
+				],
+				"type": "object",
+				"properties": {
+					"deletedAt": {
+						"type": "string",
+						"nullable": true
+					},
+					"deletedBy": {
+						"type": "string",
+						"nullable": true
+					},
+					"_id": {
+						"type": "string"
+					},
+					"startTime": {
+						"type": "string"
+					},
+					"endTime": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					},
+					"__v": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"deletedAt": null,
+					"deletedBy": null,
+					"_id": "62ce6bee37e91b0a80fddb2b",
+					"startTime": "10:00 A",
+					"endTime": "10:30 A",
+					"createdAt": "2022-07-13T06:53:34.046Z",
+					"updatedAt": "2022-07-13T06:53:34.046Z",
+					"__v": 0
+				}
+			},
+			"UpdatetimeSlotRequest": {
+				"title": "UpdatetimeSlotRequest",
+				"required": ["startTime", "endTime"],
+				"type": "object",
+				"properties": {
+					"startTime": {
+						"type": "string"
+					},
+					"endTime": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"startTime": "10:10 A",
+					"endTime": "10:30 A"
+				}
+			},
+			"DeletetimeSlotRequest": {
+				"title": "DeletetimeSlotRequest",
+				"required": ["startTime", "endTime"],
+				"type": "object",
+				"properties": {
+					"startTime": {
+						"type": "string"
+					},
+					"endTime": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"startTime": "10:00 A",
+					"endTime": "10:30 A"
+				}
+			},
+			"m20014": {
+				"title": "m20014",
+				"required": ["success", "msg", "data", "totalCount"],
+				"type": "object",
+				"properties": {
+					"success": {
+						"type": "boolean"
+					},
+					"msg": {
+						"type": "string"
+					},
+					"data": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/Data4"
+						},
+						"description": ""
+					},
+					"totalCount": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"success": true,
+					"msg": "Time Slot get successfully",
+					"data": [
+						{
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62ce6b4e887df22d203c5ff4",
+							"startTime": "10:00 A",
+							"endTime": "10:30 A",
+							"createdAt": "2022-07-13T06:50:54.541Z",
+							"updatedAt": "2022-07-13T06:50:54.541Z",
+							"__v": 0
+						}
+					],
+					"totalCount": 1
+				}
+			},
+			"CreatePackageRequest": {
+				"title": "CreatePackageRequest",
+				"required": [
+					"name",
+					"description",
+					"priceByMonth",
+					"priceByYear",
+					"shortDescription"
+				],
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					},
+					"priceByMonth": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"priceByYear": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"shortDescription": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"name": "test package11",
+					"description": "description package",
+					"priceByMonth": 10,
+					"priceByYear": 100,
+					"shortDescription": "test"
+				}
+			},
+			"UpdatePackageRequest": {
+				"title": "UpdatePackageRequest",
+				"required": [
+					"name",
+					"description",
+					"priceByMonth",
+					"priceByYear",
+					"shortDescription",
+					"image"
+				],
+				"type": "object",
+				"properties": {
+					"name": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					},
+					"priceByMonth": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"priceByYear": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"shortDescription": {
+						"type": "string"
+					},
+					"image": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"name": "test package",
+					"description": "description package",
+					"priceByMonth": 10,
+					"priceByYear": 100,
+					"shortDescription": "aaa",
+					"image": "/images/package/1658486962368.png"
+				}
+			},
+			"deletepackagerequest": {
+				"title": "deletepackagerequest",
+				"required": ["startTime", "endTime"],
+				"type": "object",
+				"properties": {
+					"startTime": {
+						"type": "string"
+					},
+					"endTime": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"startTime": "10:00 A",
+					"endTime": "10:30 A"
+				}
+			},
+			"m20018": {
+				"title": "m20018",
+				"required": ["success", "msg", "data", "totalCount"],
+				"type": "object",
+				"properties": {
+					"success": {
+						"type": "boolean"
+					},
+					"msg": {
+						"type": "string"
+					},
+					"data": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/Data6"
+						},
+						"description": ""
+					},
+					"totalCount": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"success": true,
+					"msg": "Package get successfully",
+					"data": [
+						{
+							"deletedAt": null,
+							"deletedBy": "628dfe26b34272ba6d1d1498",
+							"_id": "62d019b93f41638a7bc160d3",
+							"name": "test package1",
+							"description": "description package",
+							"priceByMonth": 10,
+							"priceByYear": 100,
+							"createdAt": "2022-07-14T13:27:21.870Z",
+							"updatedAt": "2022-07-14T13:34:41.536Z",
+							"__v": 0
+						},
+						{
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62d52ef706f372383b8a65fb",
+							"name": "test package",
+							"description": "description package",
+							"priceByMonth": 10,
+							"priceByYear": 100,
+							"shortDescription": "test",
+							"createdAt": "2022-07-18T09:59:19.109Z",
+							"updatedAt": "2022-07-18T09:59:19.109Z",
+							"__v": 0
+						}
+					],
+					"totalCount": 2
+				}
+			},
+			"Data6": {
+				"title": "Data6",
+				"required": [
+					"deletedAt",
+					"deletedBy",
+					"_id",
+					"name",
+					"description",
+					"priceByMonth",
+					"priceByYear",
+					"createdAt",
+					"updatedAt",
+					"__v"
+				],
+				"type": "object",
+				"properties": {
+					"deletedAt": {
+						"type": "string",
+						"nullable": true
+					},
+					"deletedBy": {
+						"type": "string",
+						"nullable": true
+					},
+					"_id": {
+						"type": "string"
+					},
+					"name": {
+						"type": "string"
+					},
+					"description": {
+						"type": "string"
+					},
+					"priceByMonth": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"priceByYear": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					},
+					"__v": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"shortDescription": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"deletedAt": null,
+					"deletedBy": "628dfe26b34272ba6d1d1498",
+					"_id": "62d019b93f41638a7bc160d3",
+					"name": "test package1",
+					"description": "description package",
+					"priceByMonth": 10,
+					"priceByYear": 100,
+					"createdAt": "2022-07-14T13:27:21.870Z",
+					"updatedAt": "2022-07-14T13:34:41.536Z",
+					"__v": 0
+				}
+			},
+			"m20020": {
+				"title": "m20020",
+				"required": ["success", "message", "data", "totalCount"],
+				"type": "object",
+				"properties": {
+					"success": {
+						"type": "boolean"
+					},
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/Data7"
+						},
+						"description": ""
+					},
+					"totalCount": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"success": true,
+					"message": "Health Article get successfully",
+					"data": [
+						{
+							"isEnabled": false,
+							"deletedAt": "2022-07-15T09:00:28.916Z",
+							"deletedBy": "62d12c93870bde3630ace515",
+							"_id": "62d12c93870bde3630ace515",
+							"title": "test",
+							"Description": "tet@test.com",
+							"profileImage": "public\\images\\1657875603404-Screenshot (1).png",
+							"createdAt": "2022-07-15T09:00:03.503Z",
+							"updatedAt": "2022-07-15T09:00:28.918Z",
+							"__v": 0
+						},
+						{
+							"isEnabled": true,
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62d12cc2870bde3630ace519",
+							"title": "demo",
+							"Description": "demo",
+							"profileImage": "public\\images\\1657875650221-Screenshot (1).png",
+							"createdAt": "2022-07-15T09:00:50.251Z",
+							"updatedAt": "2022-07-15T09:12:45.962Z",
+							"__v": 0
+						},
+						{
+							"isEnabled": true,
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62d132fe17eb851838f4fc17",
+							"title": "demo123",
+							"Description": "demo",
+							"profileImage": "public\\images\\1657877616039-Screenshot (2).png",
+							"createdAt": "2022-07-15T09:27:26.378Z",
+							"updatedAt": "2022-07-15T09:33:38.056Z",
+							"__v": 0
+						},
+						{
+							"isEnabled": true,
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62d14cb3face546bf00cba57",
+							"title": "Article 1",
+							"profileImage": "public/images/1657883827871-image (1).png",
+							"createdAt": "2022-07-15T11:17:07.916Z",
+							"updatedAt": "2022-07-15T11:17:07.916Z",
+							"__v": 0
+						}
+					],
+					"totalCount": 4
+				}
+			},
+			"Data7": {
+				"title": "Data7",
+				"required": [
+					"isEnabled",
+					"deletedAt",
+					"deletedBy",
+					"_id",
+					"title",
+					"profileImage",
+					"createdAt",
+					"updatedAt",
+					"__v"
+				],
+				"type": "object",
+				"properties": {
+					"isEnabled": {
+						"type": "boolean"
+					},
+					"deletedAt": {
+						"type": "string",
+						"nullable": true
+					},
+					"deletedBy": {
+						"type": "string",
+						"nullable": true
+					},
+					"_id": {
+						"type": "string"
+					},
+					"title": {
+						"type": "string"
+					},
+					"Description": {
+						"type": "string"
+					},
+					"profileImage": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					},
+					"__v": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"isEnabled": false,
+					"deletedAt": "2022-07-15T09:00:28.916Z",
+					"deletedBy": "62d12c93870bde3630ace515",
+					"_id": "62d12c93870bde3630ace515",
+					"title": "test",
+					"Description": "tet@test.com",
+					"profileImage": "public\\images\\1657875603404-Screenshot (1).png",
+					"createdAt": "2022-07-15T09:00:03.503Z",
+					"updatedAt": "2022-07-15T09:00:28.918Z",
+					"__v": 0
+				}
+			},
+			"AddSettingsRequest": {
+				"title": "AddSettingsRequest",
+				"required": ["filedName", "filedValue", "filedType"],
+				"type": "object",
+				"properties": {
+					"filedName": {
+						"type": "string"
+					},
+					"filedValue": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"filedType": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"filedName": "timeSlot",
+					"filedValue": 5,
+					"filedType": "number"
+				}
+			},
+			"m20023": {
+				"title": "m20023",
+				"required": ["success", "message", "data"],
+				"type": "object",
+				"properties": {
+					"success": {
+						"type": "boolean"
+					},
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"$ref": "#/components/schemas/Data8"
+					}
+				},
+				"example": {
+					"success": true,
+					"message": "Setting created successfully",
+					"data": {
+						"type": "NULL",
+						"isEnabled": true,
+						"deletedAt": null,
+						"deletedBy": null,
+						"_id": "62d1773e4875f5dbaf955c8d",
+						"filedName": "timeSlot",
+						"filedValue": "5",
+						"filedType": "number",
+						"createdAt": "2022-07-15T14:18:38.674Z",
+						"updatedAt": "2022-07-15T14:18:38.674Z",
+						"__v": 0
+					}
+				}
+			},
+			"Data8": {
+				"title": "Data8",
+				"required": [
+					"type",
+					"isEnabled",
+					"deletedAt",
+					"deletedBy",
+					"_id",
+					"filedName",
+					"filedValue",
+					"filedType",
+					"createdAt",
+					"updatedAt",
+					"__v"
+				],
+				"type": "object",
+				"properties": {
+					"type": {
+						"type": "string"
+					},
+					"isEnabled": {
+						"type": "boolean"
+					},
+					"deletedAt": {
+						"type": "string",
+						"nullable": true
+					},
+					"deletedBy": {
+						"type": "string",
+						"nullable": true
+					},
+					"_id": {
+						"type": "string"
+					},
+					"filedName": {
+						"type": "string"
+					},
+					"filedValue": {
+						"type": "string"
+					},
+					"filedType": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					},
+					"__v": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"type": "NULL",
+					"isEnabled": true,
+					"deletedAt": null,
+					"deletedBy": null,
+					"_id": "62d1773e4875f5dbaf955c8d",
+					"filedName": "timeSlot",
+					"filedValue": "5",
+					"filedType": "number",
+					"createdAt": "2022-07-15T14:18:38.674Z",
+					"updatedAt": "2022-07-15T14:18:38.674Z",
+					"__v": 0
+				}
+			},
+			"m20024": {
+				"title": "m20024",
+				"required": ["message", "data", "totalCount"],
+				"type": "object",
+				"properties": {
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/Data9"
+						},
+						"description": ""
+					},
+					"totalCount": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"message": "Setting get successfully",
+					"data": [
+						{
+							"type": "NULL",
+							"isEnabled": false,
+							"deletedAt": "2022-07-14T06:58:56.536Z",
+							"deletedBy": "62cea492266f8229a87aaaef",
+							"_id": "62cea492266f8229a87aaaef",
+							"content": "hellow world",
+							"filedName": "demoFiled",
+							"createdAt": "2022-07-13T10:55:14.379Z",
+							"updatedAt": "2022-07-14T06:58:56.537Z",
+							"__v": 0
+						},
+						{
+							"type": "PRIVCYPOLICY",
+							"isEnabled": false,
+							"deletedAt": "2022-07-14T06:59:10.983Z",
+							"deletedBy": "62cfbe03372c8e04b05d3006",
+							"_id": "62cfbe03372c8e04b05d3006",
+							"content": "test",
+							"filedName": "dispalysetting",
+							"filedValue": "demo",
+							"filedType": "demo",
+							"createdAt": "2022-07-14T06:56:03.914Z",
+							"updatedAt": "2022-07-14T06:59:10.984Z",
+							"__v": 0
+						},
+						{
+							"type": "PRIVCYPOLICY",
+							"isEnabled": false,
+							"deletedAt": "2022-07-14T06:57:55.418Z",
+							"deletedBy": "62cfbe40372c8e04b05d3008",
+							"_id": "62cfbe40372c8e04b05d3008",
+							"content": "test",
+							"filedName": "dispalysetting",
+							"filedValue": "demo",
+							"filedType": "demo",
+							"createdAt": "2022-07-14T06:57:04.532Z",
+							"updatedAt": "2022-07-14T06:57:55.427Z",
+							"__v": 0
+						},
+						{
+							"type": "PRIVCYPOLICY",
+							"isEnabled": false,
+							"deletedAt": "2022-07-14T07:09:23.967Z",
+							"deletedBy": "62cfc10e27a74f170c37bfae",
+							"_id": "62cfc10e27a74f170c37bfae",
+							"content": "test",
+							"filedName": "dispalysetting",
+							"filedValue": "demo",
+							"filedType": "demo",
+							"createdAt": "2022-07-14T07:09:02.363Z",
+							"updatedAt": "2022-07-14T07:09:23.973Z",
+							"__v": 0
+						},
+						{
+							"type": "PRIVCYPOLICY",
+							"isEnabled": false,
+							"deletedAt": "2022-07-14T07:10:42.422Z",
+							"deletedBy": "62cfc168c48275172c7207b3",
+							"_id": "62cfc168c48275172c7207b3",
+							"content": "test",
+							"filedName": "dispalysetting",
+							"filedValue": "demo",
+							"filedType": "demo",
+							"createdAt": "2022-07-14T07:10:32.628Z",
+							"updatedAt": "2022-07-14T07:10:42.432Z",
+							"__v": 0
+						},
+						{
+							"type": "PRIVCYPOLICY",
+							"isEnabled": true,
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62cfc17dc48275172c7207b7",
+							"content": "test",
+							"filedName": "dispalysetting",
+							"filedValue": "demo",
+							"filedType": "demo",
+							"createdAt": "2022-07-14T07:10:53.505Z",
+							"updatedAt": "2022-07-14T07:10:53.505Z",
+							"__v": 0
+						},
+						{
+							"type": "PRIVCYPOLICY",
+							"isEnabled": true,
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62cfd6e00771111b1c284316",
+							"content": "test",
+							"filedName": "dispalysetting",
+							"filedValue": "demo",
+							"filedType": "demo",
+							"createdAt": "2022-07-14T08:42:08.381Z",
+							"updatedAt": "2022-07-14T09:00:29.452Z",
+							"__v": 0
+						},
+						{
+							"type": "PRIVCYPOLICY",
+							"isEnabled": true,
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62cfdb4565ec59260ca147d9",
+							"content": "test",
+							"filedName": "dispalysetting",
+							"filedValue": "demo",
+							"filedType": "demo",
+							"createdAt": "2022-07-14T09:00:54.016Z",
+							"updatedAt": "2022-07-14T09:00:54.016Z",
+							"__v": 0
+						},
+						{
+							"type": "PRIVCYPOLICY",
+							"isEnabled": true,
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62cfdb5d65ec59260ca147db",
+							"content": "new",
+							"filedName": "dispalysetting",
+							"filedValue": "demo",
+							"filedType": "demo",
+							"createdAt": "2022-07-14T09:01:17.068Z",
+							"updatedAt": "2022-07-14T09:03:29.476Z",
+							"__v": 0
+						},
+						{
+							"type": "Null",
+							"isEnabled": true,
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62cfe087e72ce32be44ed065",
+							"content": "test",
+							"filedName": "dispalysetting",
+							"filedValue": "demo",
+							"filedType": "demo",
+							"createdAt": "2022-07-14T09:23:19.084Z",
+							"updatedAt": "2022-07-14T09:30:24.211Z",
+							"__v": 0
+						},
+						{
+							"type": "PRIVCYPOLICY",
+							"isEnabled": true,
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62cfe3c0cd5bfe20a8da72f6",
+							"content": "new",
+							"filedName": "dispalysetting",
+							"filedValue": "demo",
+							"filedType": "demo",
+							"createdAt": "2022-07-14T09:37:04.204Z",
+							"updatedAt": "2022-07-14T09:37:04.204Z",
+							"__v": 0
+						},
+						{
+							"type": "NULL",
+							"isEnabled": true,
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62d1773e4875f5dbaf955c8d",
+							"filedName": "timeSlot",
+							"filedValue": "5",
+							"filedType": "number",
+							"createdAt": "2022-07-15T14:18:38.674Z",
+							"updatedAt": "2022-07-15T14:18:38.674Z",
+							"__v": 0
+						}
+					],
+					"totalCount": 12
+				}
+			},
+			"Data9": {
+				"title": "Data9",
+				"required": [
+					"type",
+					"isEnabled",
+					"deletedAt",
+					"deletedBy",
+					"_id",
+					"filedName",
+					"createdAt",
+					"updatedAt",
+					"__v"
+				],
+				"type": "object",
+				"properties": {
+					"type": {
+						"type": "string"
+					},
+					"isEnabled": {
+						"type": "boolean"
+					},
+					"deletedAt": {
+						"type": "string",
+						"nullable": true
+					},
+					"deletedBy": {
+						"type": "string",
+						"nullable": true
+					},
+					"_id": {
+						"type": "string"
+					},
+					"content": {
+						"type": "string"
+					},
+					"filedName": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					},
+					"__v": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"filedValue": {
+						"type": "string"
+					},
+					"filedType": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"type": "NULL",
+					"isEnabled": false,
+					"deletedAt": "2022-07-14T06:58:56.536Z",
+					"deletedBy": "62cea492266f8229a87aaaef",
+					"_id": "62cea492266f8229a87aaaef",
+					"content": "hellow world",
+					"filedName": "demoFiled",
+					"createdAt": "2022-07-13T10:55:14.379Z",
+					"updatedAt": "2022-07-14T06:58:56.537Z",
+					"__v": 0
+				}
+			},
+			"UpdateSttingsRequest": {
+				"title": "UpdateSttingsRequest",
+				"required": ["type", "content"],
+				"type": "object",
+				"properties": {
+					"type": {
+						"type": "string"
+					},
+					"content": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"type": "PRIVCYPOLICY",
+					"content": "<span>khdkha</span>"
+				}
+			},
+			"m20027": {
+				"title": "m20027",
+				"required": ["status", "msg", "data", "totalCount"],
+				"type": "object",
+				"properties": {
+					"status": {
+						"type": "boolean"
+					},
+					"msg": {
+						"type": "string"
+					},
+					"data": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/Data10"
+						},
+						"description": ""
+					},
+					"totalCount": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"status": true,
+					"msg": "Faq get successfully",
+					"data": [
+						{
+							"isEnabled": true,
+							"deletedAt": null,
+							"deletedBy": null,
+							"_id": "62d529f6df9913195ce553fb",
+							"question": "test",
+							"answer": "test",
+							"createdAt": "2022-07-18T09:37:58.334Z",
+							"updatedAt": "2022-07-18T09:37:58.334Z",
+							"__v": 0
+						}
+					],
+					"totalCount": 1
+				}
+			},
+			"Data10": {
+				"title": "Data10",
+				"required": [
+					"isEnabled",
+					"deletedAt",
+					"deletedBy",
+					"_id",
+					"question",
+					"answer",
+					"createdAt",
+					"updatedAt",
+					"__v"
+				],
+				"type": "object",
+				"properties": {
+					"isEnabled": {
+						"type": "boolean"
+					},
+					"deletedAt": {
+						"type": "string",
+						"nullable": true
+					},
+					"deletedBy": {
+						"type": "string",
+						"nullable": true
+					},
+					"_id": {
+						"type": "string"
+					},
+					"question": {
+						"type": "string"
+					},
+					"answer": {
+						"type": "string"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					},
+					"__v": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"isEnabled": true,
+					"deletedAt": null,
+					"deletedBy": null,
+					"_id": "62d529f6df9913195ce553fb",
+					"question": "test",
+					"answer": "test",
+					"createdAt": "2022-07-18T09:37:58.334Z",
+					"updatedAt": "2022-07-18T09:37:58.334Z",
+					"__v": 0
+				}
+			},
+			"m20029": {
+				"title": "m20029",
+				"required": ["status", "msg", "data"],
+				"type": "object",
+				"properties": {
+					"status": {
+						"type": "boolean"
+					},
+					"msg": {
+						"type": "string"
+					},
+					"data": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": ""
+					}
+				},
+				"example": {
+					"status": true,
+					"msg": "Faq update successfully",
+					"data": []
+				}
+			},
+			"AppointmentCreateRequest": {
+				"title": "AppointmentCreateRequest",
+				"required": ["date", "timeSlotId"],
+				"type": "object",
+				"properties": {
+					"date": {
+						"type": "string"
+					},
+					"timeSlotId": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"date": "2022-07-26",
+					"timeSlotId": "62d7a59a9492b434857b8e4a"
+				}
+			},
+			"m20030": {
+				"title": "m20030",
+				"required": ["success", "msg", "data"],
+				"type": "object",
+				"properties": {
+					"success": {
+						"type": "boolean"
+					},
+					"msg": {
+						"type": "string"
+					},
+					"data": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/Data12"
+						},
+						"description": ""
+					}
+				},
+				"example": {
+					"success": true,
+					"msg": "Appointment created successfully",
+					"data": [
+						{
+							"symptoms": ["62b046d2d5debb823497dc1c"],
+							"isActive": true,
+							"drId": null,
+							"consultModel": "VIDEO",
+							"prescription": null,
+							"notes": null,
+							"deletedAt": null,
+							"deletedBy": null,
+							"isDeleted": false,
+							"_id": "62d6749958eb62639e632ffd",
+							"date": "2022-07-18T02:30:00.000Z",
+							"startTime": "8:00 A",
+							"endTime": "8:30 A",
+							"patientId": "62d51064f411fb5f8a3c4716",
+							"price": 700,
+							"createdAt": "2022-07-19T09:08:41.218Z",
+							"updatedAt": "2022-07-19T09:08:41.218Z",
+							"__v": 0
+						}
+					]
+				}
+			},
+			"Data12": {
+				"title": "Data12",
+				"required": [
+					"symptoms",
+					"isActive",
+					"drId",
+					"consultModel",
+					"prescription",
+					"notes",
+					"deletedAt",
+					"deletedBy",
+					"isDeleted",
+					"_id",
+					"date",
+					"startTime",
+					"endTime",
+					"patientId",
+					"price",
+					"createdAt",
+					"updatedAt",
+					"__v"
+				],
+				"type": "object",
+				"properties": {
+					"symptoms": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": ""
+					},
+					"isActive": {
+						"type": "boolean"
+					},
+					"drId": {
+						"type": "string",
+						"nullable": true
+					},
+					"consultModel": {
+						"type": "string"
+					},
+					"prescription": {
+						"type": "string",
+						"nullable": true
+					},
+					"notes": {
+						"type": "string",
+						"nullable": true
+					},
+					"deletedAt": {
+						"type": "string",
+						"nullable": true
+					},
+					"deletedBy": {
+						"type": "string",
+						"nullable": true
+					},
+					"isDeleted": {
+						"type": "boolean"
+					},
+					"_id": {
+						"type": "string"
+					},
+					"date": {
+						"type": "string"
+					},
+					"startTime": {
+						"type": "string"
+					},
+					"endTime": {
+						"type": "string"
+					},
+					"patientId": {
+						"type": "string"
+					},
+					"price": {
+						"type": "integer",
+						"format": "int32"
+					},
+					"createdAt": {
+						"type": "string"
+					},
+					"updatedAt": {
+						"type": "string"
+					},
+					"__v": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"symptoms": ["62b046d2d5debb823497dc1c"],
+					"isActive": true,
+					"drId": null,
+					"consultModel": "VIDEO",
+					"prescription": null,
+					"notes": null,
+					"deletedAt": null,
+					"deletedBy": null,
+					"isDeleted": false,
+					"_id": "62d6749958eb62639e632ffd",
+					"date": "2022-07-18T02:30:00.000Z",
+					"startTime": "8:00 A",
+					"endTime": "8:30 A",
+					"patientId": "62d51064f411fb5f8a3c4716",
+					"price": 700,
+					"createdAt": "2022-07-19T09:08:41.218Z",
+					"updatedAt": "2022-07-19T09:08:41.218Z",
+					"__v": 0
+				}
+			},
+			"m20031": {
+				"title": "m20031",
+				"required": ["success", "message", "data", "totalCount"],
+				"type": "object",
+				"properties": {
+					"success": {
+						"type": "boolean"
+					},
+					"message": {
+						"type": "string"
+					},
+					"data": {
+						"type": "array",
+						"items": {
+							"$ref": "#/components/schemas/Data12"
+						},
+						"description": ""
+					},
+					"totalCount": {
+						"type": "integer",
+						"format": "int32"
+					}
+				},
+				"example": {
+					"success": true,
+					"message": "Appointment get successfully",
+					"data": [
+						{
+							"symptoms": ["62b046d2d5debb823497dc1c"],
+							"isActive": true,
+							"drId": null,
+							"consultModel": "VIDEO",
+							"prescription": null,
+							"notes": null,
+							"deletedAt": null,
+							"deletedBy": null,
+							"isDeleted": false,
+							"_id": "62d65ebdf511bf5509c3b62c",
+							"date": "2022-07-19T02:30:00.000Z",
+							"startTime": "8:00 AM",
+							"endTime": "8:30 AM",
+							"patientId": "62d51064f411fb5f8a3c4716",
+							"price": 700,
+							"createdAt": "2022-07-19T07:35:25.733Z",
+							"updatedAt": "2022-07-19T07:35:25.733Z",
+							"__v": 0
+						},
+						{
+							"symptoms": ["62b046d2d5debb823497dc1c"],
+							"isActive": true,
+							"drId": null,
+							"consultModel": "VIDEO",
+							"prescription": null,
+							"notes": null,
+							"deletedAt": null,
+							"deletedBy": null,
+							"isDeleted": false,
+							"_id": "62d668a1f511bf5509c3b632",
+							"date": "2023-07-19T18:30:00.000Z",
+							"startTime": "8:00 A",
+							"endTime": "8:30 A",
+							"patientId": "62d51064f411fb5f8a3c4716",
+							"price": 700,
+							"createdAt": "2022-07-19T08:17:37.343Z",
+							"updatedAt": "2022-07-19T08:18:14.205Z",
+							"__v": 0
+						}
+					],
+					"totalCount": 2
+				}
+			},
+			"AppointmentUpdateRequest": {
+				"title": "AppointmentUpdateRequest",
+				"required": ["date", "startTime", "endTime", "pain"],
+				"type": "object",
+				"properties": {
+					"date": {
+						"type": "string"
+					},
+					"startTime": {
+						"type": "string"
+					},
+					"endTime": {
+						"type": "string"
+					},
+					"pain": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": ""
+					}
+				},
+				"example": {
+					"date": "08-18-2022",
+					"startTime": "8:00 A",
+					"endTime": "8:30 A",
+					"pain": ["62b046d2d5debb823497dc1c"]
+				}
+			},
+			"m20032": {
+				"title": "m20032",
+				"required": ["date", "startTime", "endTime", "pain"],
+				"type": "object",
+				"properties": {
+					"date": {
+						"type": "string"
+					},
+					"startTime": {
+						"type": "string"
+					},
+					"endTime": {
+						"type": "string"
+					},
+					"pain": {
+						"type": "array",
+						"items": {
+							"type": "string"
+						},
+						"description": ""
+					}
+				},
+				"example": {
+					"date": "08-18-2022",
+					"startTime": "8:00 A",
+					"endTime": "8:30 A",
+					"pain": ["62b046d2d5debb823497dc1c"]
+				}
+			},
+			"addPaymentRequest": {
+				"title": "addPaymentRequest",
+				"required": ["appointmentId", "paymentId"],
+				"type": "object",
+				"properties": {
+					"appointmentId": {
+						"type": "string"
+					},
+					"paymentId": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"appointmentId": "62d65df0f511bf5509c3b622",
+					"paymentId": "pay_Jva8VkThS76MEa"
+				}
+			},
+			"GetTimeSlotBYTodayRequest": {
+				"title": "GetTimeSlotBYTodayRequest",
+				"required": ["date"],
+				"type": "object",
+				"properties": {
+					"date": {
+						"type": "string"
+					}
+				},
+				"example": {
+					"date": "2022-07-27"
+				}
+			}
+		},
+		"securitySchemes": {
+			"bearer": {
+				"type": "http",
+				"scheme": "bearer"
+			}
+		}
+	},
+	"security": [],
+	"tags": [
+		{
+			"name": "Admin permissions"
+		},
+		{
+			"name": "Admin Role"
+		},
+		{
+			"name": "Admin User"
+		},
+		{
+			"name": "User"
+		},
+		{
+			"name": "Dr &customer"
+		},
+		{
+			"name": "Speciality"
+		},
+		{
+			"name": "common api"
+		},
+		{
+			"name": "NotificationType"
+		},
+		{
+			"name": "Device"
+		},
+		{
+			"name": "Dashboard"
+		},
+		{
+			"name": "Time Slot"
+		},
+		{
+			"name": "Package Management"
+		},
+		{
+			"name": "Health Article"
+		},
+		{
+			"name": "Settings"
+		},
+		{
+			"name": "faqs"
+		},
+		{
+			"name": "Appointment"
+		},
+		{
+			"name": "payment"
+		},
+		{
+			"name": "Image Uplod"
+		},
+		{
+			"name": "Get all time SLot"
+		}
+	]
+}
